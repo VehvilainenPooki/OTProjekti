@@ -4,5 +4,5 @@
 
 ## Tehtävät
 ### Viikko 1
-#### https://github.com/VehvilainenPooki/OTProjekti/blob/main/laskarit/viikko1/komentorivi.txt
-#### https://github.com/VehvilainenPooki/OTProjekti/blob/main/laskarit/viikko1/komentorivi.txt
+#### [komentorivi.txt](https://github.com/VehvilainenPooki/OTProjekti/blob/main/laskarit/viikko1/komentorivi.txt)
+#### [gitlog.txt](https://github.com/VehvilainenPooki/OTProjekti/blob/main/laskarit/viikko1/komentorivi.txt)
