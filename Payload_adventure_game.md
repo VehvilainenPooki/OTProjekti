@@ -8,7 +8,7 @@
 ### Pelissä on alkuruutu ja mahdollisuus vaihtaa asetuksia.
 ## Perusversion tarjoama toiminnallisuus
 ### - Alkuruutu
-###   - Pelin aloitus nappula
+###     - Pelin aloitus nappula
 ###   - Asetukset
 ### - Peli
 ###   - Peli hyppää suoraan pelaamiseen
