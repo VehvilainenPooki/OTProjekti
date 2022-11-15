@@ -1,6 +1,6 @@
 # Vaatimusmäärittely
 ## Pelin tarkoitus
-### Peli, joka on keskittynyt "Payload" vaunun ympärille. Kuljetaan erilaisten alueiden läpi puolustaen vaunuja, keräten resursseja ja päivittäen erilaisia hahmon ja vaunun ominaisuuksi.
+### Peli, joka on keskittynyt "Payload" vaunun ympärille. Kuljetaan erilaisten alueiden läpi puolustaen vaunuja, keräten resursseja ja päivittäen erilaisia hahmon ja vaunun ominaisuuksi. Peli on Roguelike Escort mission.
 ## Käyttäjät
 ### Peli on yksinpeli, johon ei ole tarkoitus implementoida "god" tai admin tilaa.
 ## käyttöliittymäluonnos
