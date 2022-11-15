@@ -18,7 +18,7 @@
   - 3 erilaista tutkittavaa aluetta
   - 2 päivitystä pelaajalle
   - 2 päivitystä vaunulle
-![alt text]([http://url/to/img.png](https://raw.githubusercontent.com/VehvilainenPooki/OTProjekti/main/Documentation/Images/Luonnos.png))
+![http://url/to/img.png](https://raw.githubusercontent.com/VehvilainenPooki/OTProjekti/main/Documentation/Images/Luonnos.png)
 ## Jatkokehitysideoita
 ### Perusversion jälkeen järjestelmää täydennetään ajan salliessa esim. seuraavilla toiminnallisuuksilla:
 - Useampia vihollistyyppejä
