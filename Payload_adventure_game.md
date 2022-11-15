@@ -18,7 +18,7 @@
   - 3 erilaista tutkittavaa aluetta
   - 2 päivitystä pelaajalle
   - 2 päivitystä vaunulle
-![](.\Documentation\Images\luonnos.png)
+![](OTProjekti/Documentation/Images/Luonnos.png)
 ## Jatkokehitysideoita
 ### Perusversion jälkeen järjestelmää täydennetään ajan salliessa esim. seuraavilla toiminnallisuuksilla:
 - Useampia vihollistyyppejä
