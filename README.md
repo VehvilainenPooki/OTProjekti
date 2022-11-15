@@ -7,4 +7,4 @@
 #### [komentorivi.txt](https://github.com/VehvilainenPooki/OTProjekti/blob/main/laskarit/viikko1/komentorivi.txt)
 #### [gitlog.txt](https://github.com/VehvilainenPooki/OTProjekti/blob/main/laskarit/viikko1/komentorivi.txt)
 ### Viikko 2
-#### [coverage_html_screenshot.png]([https://github.com/VehvilainenPooki/OTProjekti/blob/main/laskarit/viikko2/coverageHtmlScreenshot.png](https://github.com/VehvilainenPooki/OTProjekti/blob/main/laskarit/viikko2/coverage_html_screenshot.png))
+#### [coverage_html_screenshot.png](https://github.com/VehvilainenPooki/OTProjekti/blob/main/laskarit/viikko2/coverage_html_screenshot.png)
