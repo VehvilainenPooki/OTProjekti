@@ -7,7 +7,7 @@
 ### Peli on ylhäältäpäin kuvattu 2D maailma, jossa kamera seuraa pelaajaa
 ### Pelissä on alkuruutu ja mahdollisuus vaihtaa asetuksia.
 ## Perusversion tarjoama toiminnallisuus
-### - Alkuruutu
+### 1. Alkuruutu
 ###     - Pelin aloitus nappula
 ###   - Asetukset
 ### - Peli
