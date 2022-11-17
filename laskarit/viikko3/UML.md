@@ -94,5 +94,7 @@
 
 ```mermaid
  sequenceDiagram
-      main->>Machine: Machine()  
+      main->>Machine: Machine()
+      main->>Rekisteri: drive()
+      Machine<<-Rekisteri: _engine.start()
 ``` 
