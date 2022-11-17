@@ -102,3 +102,14 @@
       Rekisteri->>Machine: _engine.use_energy()
       Rekisteri-->>-main:  
 ```
+
+## Tehtävä 4: Laajempi sekvenssikaavio
+
+```mermaid
+ sequenceDiagram
+      main->>laitehallinto: HKLLaitehallinto()
+      main->>rautatietori: Lataajalaite()
+      main->>ratikka6: lukijalaite()
+      main->>bussi244: lukijalaite()
+      
+```
