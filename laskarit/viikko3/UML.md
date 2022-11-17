@@ -56,8 +56,8 @@
           tapahtuma()
       }
       
-      Kortti{
-          
+      class Kortti{
+          tapahtuma()
       }
 
       class Katu{
