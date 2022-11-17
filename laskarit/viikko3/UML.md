@@ -53,6 +53,7 @@
           tapahtuma()
       }
       class Asemat_ja_laitokset{
+          nimi
           tapahtuma()
       }
       
@@ -61,8 +62,14 @@
       }
 
       class Katu{
-          tapahtuma()
           nimi
+          talot
+          hotellit
+          omistaja
+          lisaa_omistaja()
+          lisaa_talo()
+          lisaa_hotelli()
+          tapahtuma()
       }
       class Ruutu{
           ruudun_hinta
@@ -76,6 +83,7 @@
       }
       class Pelaaja{
           pelinappula
+          lompakko
       }
       class Noppa{
           random(1,6)
