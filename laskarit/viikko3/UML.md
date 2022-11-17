@@ -24,12 +24,15 @@
  classDiagram
       Pelaaja "2" ..> Noppa
       Pelilauta ..> "8" Pelaaja
+      
+      
       Ruutu <.. "40" Pelilauta
-      Aloitusruutu ..> Ruutu
-      Vankila ..> Ruutu
-      Sattuma_ja_yhteismaa ..> Ruutu
-      Asemat_ja_laitokset ..> Ruutu
-      katu ..> Ruutu
+      
+      Aloitusruutu <.. Ruutu
+      Vankila <.. Ruutu
+      Sattuma_ja_yhteismaa <.. Ruutu
+      Asemat_ja_laitokset <.. Ruutu
+      katu <.. Ruutu
       
       class Ruutu{
           ______________________________
