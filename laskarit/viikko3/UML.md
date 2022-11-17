@@ -95,9 +95,10 @@
 ```mermaid
  sequenceDiagram
       main->>Machine: Machine()
-      main->>Rekisteri: drive()
+      main->>+Rekisteri: drive()
       Rekisteri->>Machine: _engine.start()
       Rekisteri->>+Machine: _engine.is_running()
-      Machine->>-Rekisteri: True
+      Machine-->>-Rekisteri: True
       Rekisteri->>Machine: _engine.use_energy()
-``` 
+      Rekisteri-->>-main:  
+```
