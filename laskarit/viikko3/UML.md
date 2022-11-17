@@ -34,12 +34,45 @@
       Asemat_ja_laitokset <.. Ruutu
       katu <.. Ruutu
       
-      class Ruutu{
-          ______________________________
+      Sattuma_ja_yhteismaa ..> Kortti
+      
+      class Aloitusruutu{
+          tapahtuma()
+          kierros_bonus
+          keraa_bonus()
       }
+      class Vankila{
+          tapahtuma()
+          vanki_aika
+          vangit
+          lisaa_vanki()
+          vapauta_vanki()
+          vähennä_aikaa
+      }
+      class Sattuma_ja_yhteismaa{
+          tapahtuma()
+      }
+      class Asemat_ja_laitokset{
+          tapahtuma()
+      }
+      Kortti{
+          tapahtuma()
+      }
+      
+      
+      class katu{
+          tapahtuma()
+          nimi
+      }
+      class Ruutu{
+          ruudun_hinta
+          pysahtymis_maksu
+          seuraava_ruutu
+          osta_ruutu()
+      }
+      
       class Pelilauta{
-          aloitusruutu_sijainti()
-          vankila_sijainti()
+          update()
       }
       class Pelaaja{
           pelinappula
