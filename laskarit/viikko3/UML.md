@@ -3,7 +3,7 @@
 
 ```mermaid
  classDiagram
-      Pelaaja "2" --> "" Noppa
+      Pelaaja "2" ..> "" Noppa
       class Pelaaja{
           pelinappula
       }
