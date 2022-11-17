@@ -94,6 +94,5 @@
 
 ```mermaid
  sequenceDiagram
-      main->>+Machine: Machine()
-      Machine-->>-main:  
+      main->>Machine: Machine()  
 ``` 
