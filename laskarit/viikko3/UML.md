@@ -1,17 +1,13 @@
-## Sovelluslogiikka
+## Tehtävä 1 Monopoli
 
-Sovelluksen loogisen tietomallin muodostavat luokat User ja Todo, jotka kuvaavat käyttäjiä ja käyttäjien tehtäviä:
 
 ```mermaid
  classDiagram
-      Todo "*" --> "1" User
-      class User{
-          username
-          password
+      Pelaaja "2" --> "" Noppa
+      class Pelaaja{
+          pelinappula
       }
-      class Todo{
-          id
-          content
-          done
+      class Noppa{
+          random(1,6)
       }
 ```
