@@ -96,5 +96,5 @@
  sequenceDiagram
       main->>Machine: Machine()
       main->>Rekisteri: drive()
-      Machine<<-Rekisteri: _engine.start()
+      Rekisteri->>Machine: _engine.start()
 ``` 
