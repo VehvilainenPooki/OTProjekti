@@ -32,7 +32,7 @@
       Vankila <.. Ruutu
       Sattuma_ja_yhteismaa <.. Ruutu
       Asemat_ja_laitokset <.. Ruutu
-      katu <.. Ruutu
+      Katu <.. Ruutu
       
       Sattuma_ja_yhteismaa ..> Kortti
       
@@ -55,12 +55,13 @@
       class Asemat_ja_laitokset{
           tapahtuma()
       }
+      
       Kortti{
-          tapahtuma()
+          
       }
       
       
-      class katu{
+      class Katu{
           tapahtuma()
           nimi
       }
