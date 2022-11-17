@@ -89,3 +89,12 @@
           random(1,6)
       }
 ```
+
+## Tehtävä 3: Sekvenssikaavio
+
+```mermaid
+ sequenceDiagram
+      Alice->>+John: Hello John, how are you?
+      John-->>-Alice: Great!
+
+``` 
