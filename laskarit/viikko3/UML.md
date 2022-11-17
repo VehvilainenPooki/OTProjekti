@@ -59,8 +59,7 @@
       Kortti{
           
       }
-      
-      
+
       class Katu{
           tapahtuma()
           nimi
