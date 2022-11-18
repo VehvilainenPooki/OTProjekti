@@ -122,5 +122,4 @@
       Rekisteri-->>-main:  
       main->>lippu_luukku: Kioski()
       main->>+Rekisteri: lippu_luukku.osta_matkakortti("Kalle")
-      Rekisteri->>main
 ```
