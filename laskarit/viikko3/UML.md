@@ -94,13 +94,13 @@
 
 ```mermaid
  sequenceDiagram
-      main->>Machine: Machine()
-      main->>+Rekisteri: drive()
-      Rekisteri->>Machine: _engine.start()
-      Rekisteri->>+Machine: _engine.is_running()
-      Machine-->>-Rekisteri: True
-      Rekisteri->>Machine: _engine.use_energy()
-      Rekisteri-->>-main:  
+      main->>machine: Machine()
+      main->>+machine: drive()
+      machine->>engine: _engine.start()
+      machine->>+engine: _engine.is_running()
+      engine-->>-machine: True
+      machine->>engine: _engine.use_energy()
+      machine-->>-main:  
 ```
 
 ## Tehtävä 4: Laajempi sekvenssikaavio
