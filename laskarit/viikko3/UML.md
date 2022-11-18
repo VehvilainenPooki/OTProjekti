@@ -119,14 +119,14 @@
       
       main->>lippu_luukku: Kioski()
       main->>+lippu_luukku: osta_matkakortti("Kalle")
-      lippu_luukku->>Kalle: Matkakortti("Kalle")
+      lippu_luukku->>kallen_kortti: Matkakortti("Kalle")
       lippu_luukku-->>-main: uusi_kortti
       main->>+rautatietori: lataa_arvoa(kallen_kortti, 3)
-      rautatietori->>Kalle: kasvata_arvoa(3)
+      rautatietori->>kallen_kortti: kasvata_arvoa(3)
       rautatietori-->>-main:  
       main->>+ratikka6: osta_lippu(kallen_kortti, 0)
-      ratikka6->>+Kalle: arvo
+      ratikka6->>+kallen_kortti: arvo
       Kalle-->>-ratikka6: 3
-      ratikka6->>Kalle: vahenna_arvoa(1.5)
+      ratikka6->>kallen_kortti: vahenna_arvoa(1.5)
       ratikka6-->>-main:  
 ```
