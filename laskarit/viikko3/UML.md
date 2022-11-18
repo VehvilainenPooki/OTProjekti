@@ -111,14 +111,17 @@
       main->>rautatietori: Lataajalaite()
       main->>ratikka6: lukijalaite()
       main->>bussi244: lukijalaite()
-      main->>+laitehallinto: laitehallinto.lisaa_lataaja(rautatietori)
+      main->>+laitehallinto: lisaa_lataaja(rautatietori)
        
-      main->>+laitehallinto: laitehallinto.lisaa_lukija(ratikka6)
+      main->>+laitehallinto: lisaa_lukija(ratikka6)
       
-      main->>+laitehallinto: laitehallinto.lisaa_lukija(bussi244)
+      main->>+laitehallinto: lisaa_lukija(bussi244)
       
       main->>lippu_luukku: Kioski()
-      main->>+lippu_luukku: lippu_luukku.osta_matkakortti("Kalle")
+      main->>+lippu_luukku: osta_matkakortti("Kalle")
       lippu_luukku->>Kalle: Matkakortti("Kalle")
       lippu_luukku-->>-main: uusi_kortti
+      main->>+rautatietori: lataa_arvoa(kallen_kortti, 3)
+      rautatietori->>Kalle: kasvata_arvoa(3)
+      rautatietori->>-main:  
 ```
