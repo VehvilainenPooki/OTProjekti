@@ -118,9 +118,9 @@
       main->>+Rekisteri: laitehallinto.lisaa_lukija(ratikka6)
       Rekisteri->>laitehallinto: ._lukijat.append(ratikka6)
       laitehallinto-->>Rekisteri:  
-      rekisteri-->>-main:  
+      Rekisteri-->>-main:  
       main->>+Rekisteri: laitehallinto.lisaa_lukija(bussi244)
       Rekisteri->>laitehallinto: ._lukijat.append(bussi244)
       laitehallinto-->>Rekisteri:  
-      rekisteri-->>-main:  
+      Rekisteri-->>-main:  
 ```
