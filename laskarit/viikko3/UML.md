@@ -118,5 +118,7 @@
       main->>+laitehallinto: laitehallinto.lisaa_lukija(bussi244)
       
       main->>lippu_luukku: Kioski()
-      main->>+Rekisteri: lippu_luukku.osta_matkakortti("Kalle")
+      main->>+lippu_luukku: lippu_luukku.osta_matkakortti("Kalle")
+      lippu_luukku->>Kalle: Matkakortti("Kalle")
+      lippu_luukku-->>-main: uusi_kortti
 ```
