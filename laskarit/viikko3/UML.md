@@ -120,4 +120,7 @@
       main->>+Rekisteri: laitehallinto.lisaa_lukija(bussi244)
       Rekisteri->>laitehallinto: ._lukijat.append(bussi244)
       Rekisteri-->>-main:  
+      main->>lippu_luukku: Kioski()
+      main->>+Rekisteri: lippu_luukku.osta_matkakortti("Kalle")
+      Rekisteri->>main
 ```
