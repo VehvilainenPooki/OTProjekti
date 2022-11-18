@@ -113,14 +113,11 @@
       main->>bussi244: lukijalaite()
       main->>+Rekisteri: laitehallinto.lisaa_lataaja(rautatietori)
       Rekisteri->>laitehallinto: ._lataajat.append(rautatietori)
-      laitehallinto-->>Rekisteri:  
       Rekisteri-->>-main:  
       main->>+Rekisteri: laitehallinto.lisaa_lukija(ratikka6)
       Rekisteri->>laitehallinto: ._lukijat.append(ratikka6)
-      laitehallinto-->>Rekisteri:  
       Rekisteri-->>-main:  
       main->>+Rekisteri: laitehallinto.lisaa_lukija(bussi244)
       Rekisteri->>laitehallinto: ._lukijat.append(bussi244)
-      laitehallinto-->>Rekisteri:  
       Rekisteri-->>-main:  
 ```
