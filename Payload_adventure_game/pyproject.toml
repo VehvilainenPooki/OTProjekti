@@ -9,6 +9,7 @@ packages = [{include = "payload_adventure_game"}]
 [tool.poetry.dependencies]
 python = "^3.8"
 pygame = "^2.1.2"
+invoke = "^1.7.3"
 
 
 [tool.poetry.group.dev.dependencies]
