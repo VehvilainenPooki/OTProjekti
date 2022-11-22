@@ -8,5 +8,5 @@
 ### [Vaatimusmäärittely](https://github.com/VehvilainenPooki/OTProjekti/blob/main/Payload_adventure_game.md)
 ### Arkkitehtuurikuvaus (WIP)
 ### Testing documents (WIP)
-### [Book Of Spent Time](https://github.com/VehvilainenPooki/OTProjekti/blob/main/Payload_adventure_game/Documentation/BookOfSpentTime.txt)
+### [Working Hours Log](https://github.com/VehvilainenPooki/OTProjekti/blob/main/Payload_adventure_game/Documentation/WorkingHoursLog.txt)
 ### [ChangeLog](https://github.com/VehvilainenPooki/OTProjekti/blob/main/Payload_adventure_game/Documentation/ChangeLog.md)
