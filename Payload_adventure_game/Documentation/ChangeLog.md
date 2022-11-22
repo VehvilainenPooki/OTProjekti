@@ -1,8 +1,8 @@
 # ChangeLog
 ## Week 3
-#### 22.11.22
-### Added pygame and invoke to project and pytest coverage to dev
-### A basic movement framework implemented 
-### Changed GitHub page to represent project
-### Added coverage exceptions to .coveragerc
-### Added Invoke tasks for start, test and coverage-report
+##### 22.11.22
+#### Added pygame and invoke to project and pytest coverage to dev
+#### A basic movement framework implemented 
+#### Changed GitHub page to represent project
+#### Added coverage exceptions to .coveragerc
+#### Added Invoke tasks for start, test and coverage-report
