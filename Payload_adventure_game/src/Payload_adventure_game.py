@@ -8,6 +8,8 @@ clock = pygame.time.Clock()
 
 cameraX = 0
 cameraY = 0
+playerX = 0
+playerY = 0
 
 background = pygame.Surface((800,400))
 colorBlock = pygame.Surface((100,50))
@@ -47,9 +49,19 @@ while True:
 
 
     #Moving camera/player
-    colorBlockr.y += cameraY
-    colorBlockr.x += cameraX
+    if playerX > 200 and cameraX > 0:
+        cameraX = 0
+    elif playerX < -200 and cameraX < 0:
+        cameraX = 0
+    if playerY > 200 and cameraY > 0:
+        cameraY = 0
+    elif playerY < -200 and cameraY < 0:
+        cameraY = 0
 
+    colorBlockr.x += cameraX
+    colorBlockr.y += cameraY
+    playerX += cameraX
+    playerY += cameraY
 
 
     #Rendering frame
