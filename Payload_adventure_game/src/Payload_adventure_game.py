@@ -2,7 +2,7 @@ import pygame
 from sys import exit
 
 pygame.init()
-screen = pygame.display.set_mode((800,400))
+screen = pygame.display.set_mode((800, 400))
 pygame.display.set_caption("Playload_adventure_game")
 clock = pygame.time.Clock()
 
@@ -11,23 +11,22 @@ cameraY = 0
 playerX = 0
 playerY = 0
 
-background = pygame.Surface((800,400))
-colorBlock = pygame.Surface((100,50))
-colorBlockr = colorBlock.get_rect(center = (400,225))
-player = pygame.Surface((40,50))
-player_rect = player.get_rect(center = (400, 200))
+background = pygame.Surface((800, 400))
+colorBlock = pygame.Surface((100, 50))
+colorBlockr = colorBlock.get_rect(center=(400, 225))
+player = pygame.Surface((40, 50))
+player_rect = player.get_rect(center=(400, 200))
 
-#Main loop for now
+# Main loop for now
 while True:
-    #Exit event
+    # Exit event
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             pygame.quit()
             exit()
     1
-    
-    
-    #Basic movement script
+
+    # Basic movement script
     keys = pygame.key.get_pressed()
     if keys[pygame.K_w] and keys[pygame.K_s]:
         cameraY = 0
@@ -47,8 +46,7 @@ while True:
         cameraX = 0
     1
 
-
-    #Moving camera/player
+    # Moving camera/player
     if playerX > 200 and cameraX > 0:
         cameraX = 0
     elif playerX < -200 and cameraX < 0:
@@ -63,11 +61,10 @@ while True:
     playerX += cameraX
     playerY += cameraY
 
-
-    #Rendering frame
-    screen.blit(background, (0,0))
-    pygame.draw.rect(screen,"Red",colorBlockr)
-    pygame.draw.rect(screen,"Blue",player_rect)
+    # Rendering frame
+    screen.blit(background, (0, 0))
+    pygame.draw.rect(screen, "Red", colorBlockr)
+    pygame.draw.rect(screen, "Blue", player_rect)
 
     pygame.display.update()
     clock.tick(60)
