@@ -10,4 +10,4 @@
 |29.11.22|1:00:00|Designed and added ArchitectureDescription.md|
 |29.11.22|0:15:00|Cleaned up the repository|
 |------|------|------|
-|TotalTime ->|8:00:00||
+||8:00:00|<-Total time spent on the project|
