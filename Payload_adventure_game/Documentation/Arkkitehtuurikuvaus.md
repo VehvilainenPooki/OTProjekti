@@ -41,5 +41,5 @@
       Thegame ..> World
       Move ..> Player
       World ..> Sprite
-      World ..> Resourse
+      World ..> Resource
 ```mermaid
