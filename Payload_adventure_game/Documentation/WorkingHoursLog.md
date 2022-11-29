@@ -9,4 +9,4 @@
 |23.11.22|1:00:00|Scrolling through random tutorials|
 |29.11.22|1:00:00|Designed and added ArchitectureDescription.md|
 |------|------|------|
-|TotalTime->|7:45:00||
+|TotalTime ->|7:45:00||
