@@ -5,7 +5,7 @@
 ### This project is being developed in python 3.8.10. It might have issues if ran with an older version of python.
 ## Documentation
 ### Launching the game (WIP)
-### [Vaatimusmäärittely](https://github.com/VehvilainenPooki/OTProjekti/blob/main/Payload_adventure_game.md)
+### [Vaatimusmäärittely](https://github.com/VehvilainenPooki/OTProjekti/blob/main/Payload_adventure_game.md) (Requirements specification)
 ### [ArchitectureDescription](https://github.com/VehvilainenPooki/OTProjekti/blob/main/Payload_adventure_game/Documentation/ArchitectureDescription.md)
 ### Testing documents (WIP)
 ### [Working Hours Log](https://github.com/VehvilainenPooki/OTProjekti/blob/main/Payload_adventure_game/Documentation/WorkingHoursLog.txt)
