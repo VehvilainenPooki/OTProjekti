@@ -42,4 +42,5 @@
       Move ..> Player
       World ..> Sprite
       World ..> Resource
+      Thegame ..> Camera
 ```
