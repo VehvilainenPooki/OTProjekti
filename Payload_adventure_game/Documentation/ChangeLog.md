@@ -10,3 +10,4 @@
 #### Added pylint and autopep8 to poetry dev group
 #### Fixed pylint giving "pygame has no X member" suggestions
 #### Made ArchitectureDescription.md in Documents and added link to it in README.md
+#### No progress with the game. Had a terrible week. Hopefully next week is better.
