@@ -6,7 +6,7 @@
 ## Documentation
 ### Launching the game (WIP)
 ### [Vaatimusmäärittely](https://github.com/VehvilainenPooki/OTProjekti/blob/main/Payload_adventure_game.md)
-### Arkkitehtuurikuvaus (WIP)
+### [Arkkitehtuurikuvaus](https://github.com/VehvilainenPooki/OTProjekti/blob/main/Payload_adventure_game/Documentation/Arkkitehtuurikuvaus.md)
 ### Testing documents (WIP)
 ### [Working Hours Log](https://github.com/VehvilainenPooki/OTProjekti/blob/main/Payload_adventure_game/Documentation/WorkingHoursLog.txt)
 ### [ChangeLog](https://github.com/VehvilainenPooki/OTProjekti/blob/main/Payload_adventure_game/Documentation/ChangeLog.md)
