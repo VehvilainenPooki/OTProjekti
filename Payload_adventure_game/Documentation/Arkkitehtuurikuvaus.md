@@ -42,4 +42,4 @@
       Move ..> Player
       World ..> Sprite
       World ..> Resource
-```mermaid
+```
