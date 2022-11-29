@@ -8,4 +8,3 @@
 |22.11.22|0:20:00|Made invoke tasks for start, test and coverage-report (Windows didn't support pty so I didn't have time to test its functionality)|
 |23.11.22|1:00:00|Scrolling through random tutorials|
 |29.11.22|1:00:00|Designed and added ArchitectureDescription.md|
-|29.11.22|1:00:00|Starting to make Player and Camera classes|
