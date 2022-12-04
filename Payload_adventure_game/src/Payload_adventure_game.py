@@ -3,6 +3,7 @@ from sys import exit
 
 from chunkloader import ChunkLoader
 from movement import Movement
+from camera import Camera
 
 
 def main():
@@ -19,7 +20,10 @@ def main():
     chunkloader.all_sprites.draw(screen)
 
     #Initializing movement
-    movement = Movement(chunkloader.get_player())
+    player = chunkloader.get_player()
+    movement = Movement(player)
+    #Initializing camera
+    c = Camera(player)
 
     # Main loop for now
     running = True
@@ -41,7 +45,9 @@ def main():
         # Rendering frame
         screen.blit(background, (0, 0))
 
-        chunkloader.all_sprites.draw(screen)
+        for sprite in chunkloader.all_sprites:
+            screen.blit(sprite.image, (sprite.rect.x - c.get_x(), sprite.rect.y - c.get_y()))
+
         pygame.display.update()
         clock.tick(60)
 
