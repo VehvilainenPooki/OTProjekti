@@ -32,6 +32,14 @@ class Player(pygame.sprite.Sprite):
     def set_pos(self, x, y):
         self.posx = x
         self.posy = y
+        self.rect.x = x
+        self.rect.y = y
+    
+    def add_pos(self, x, y):
+        self.posx += x
+        self.posy += y
+        self.rect.x = self.posx
+        self.rect.y = self.posy
     
     def get_hitbox_r(self):
         return self.hboxr

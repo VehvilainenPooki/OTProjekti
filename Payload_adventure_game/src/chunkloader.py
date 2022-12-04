@@ -21,5 +21,8 @@ class ChunkLoader:
             self.player,
             self.terrainsprites
         )
+    
+    def get_player(self):
+        return self.player
 
 
