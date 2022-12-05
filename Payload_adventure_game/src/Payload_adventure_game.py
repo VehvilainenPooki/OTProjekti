@@ -4,6 +4,7 @@ from sys import exit
 from chunkloader import ChunkLoader
 from movement import Movement
 from camera import Camera
+from Collisions import Collisions
 
 
 def main():
@@ -25,6 +26,8 @@ def main():
     #Initializing camera
     c = Camera(player)
 
+    #Initializing collision detection
+    collisions = Collisions(player)
     # Main loop for now
     running = True
     while running:
@@ -46,7 +49,11 @@ def main():
         screen.blit(background, (0, 0))
 
         for sprite in chunkloader.all_sprites:
+            if collisions.are_colliding(sprite):
+                movement.remove_collision(sprite)
+            print(str(sprite.get_hitbox_r()) + str(sprite.rect.center))
             screen.blit(sprite.image, (sprite.rect.x - c.get_x(), sprite.rect.y - c.get_y()))
+
 
         pygame.display.update()
         clock.tick(60)

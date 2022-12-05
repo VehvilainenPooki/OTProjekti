@@ -11,6 +11,7 @@
 |29.11.22|0:15:00|Cleaned up the repository|
 |4.12.22|10:15-13:40|Creating proper classes for player sprite and camera|
 |4.12.22|15:15-17:00|working on the movement script|
-|4.12.22|17:30|Working on the camera|
+|4.12.22|17:30-18:00|Working on the camera|
+|4.12.22|20:00-21:00|Working on sprite collision|
 |------|------|------|
 ||8:00:00|<-Total time spent on the project|

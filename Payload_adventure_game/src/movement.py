@@ -1,4 +1,5 @@
 import pygame
+import math
 from player import Player
 
 class Movement:
@@ -60,3 +61,25 @@ class Movement:
             #print("a")
             self.player.add_pos(-speed,0)
         
+    def remove_collision(self, circle):
+        #Checking how much to move the player
+        p = self.player.rect.center
+        c = circle.rect.center
+        d = math.dist(p, c)
+        r = circle.get_hitbox_r()
+        dif = d-(self.player.get_hitbox_r()+r)
+
+        dist_x = math.dist([p[0]], [c[0]])
+        dist_y = math.dist([p[1]], [c[1]])
+        if d == 0:
+            return
+        dist_x = dist_x*(dif/d)
+        dist_y = dist_y*(dif/d)
+        #Checking which direction to move the player
+        if p[0] > c[0]:
+            dist_x = -dist_x
+        if p[1] > c[1]:
+            dist_y = -dist_y
+
+        #Moving the player
+        self.player.add_pos(dist_x, dist_y)
