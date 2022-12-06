@@ -1,7 +1,6 @@
 ###### This is an WIP project that is being developed for a course from the University of Helsinki https://ohjelmistotekniikka-hy.github.io/
 # Payload_adventure_game
 ### Game with a take on the classic payload mission. Travel a world while protecting your waggon, collecting resource, and unlocking new abilities.
-[Early Release](https://github.com/VehvilainenPooki/OTProjekti/releases/tag/viikko5)
 ## About Python version
 ### This project is being developed in python 3.8.10. It might have issues if ran with an older version of python.
 ## Documentation
@@ -10,6 +9,7 @@
 ### Testing documents (WIP)
 ### [Working Hours Log](https://github.com/VehvilainenPooki/OTProjekti/blob/main/Payload_adventure_game/Documentation/WorkingHoursLog.md)
 ### [ChangeLog](https://github.com/VehvilainenPooki/OTProjekti/blob/main/Payload_adventure_game/Documentation/ChangeLog.md)
+### [Release](https://github.com/VehvilainenPooki/OTProjekti/releases/tag/viikko5)
 ## Install
 1. Install dependencies with:
 ```bash
