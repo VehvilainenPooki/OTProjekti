@@ -37,7 +37,7 @@ sequenceDiagram
   actor Player
   participant Terrainsprite
   participant Movement
-  Player->>Collisions: are_colliding(Terrainsprite)
+  gameloop->>Collisions: are_colliding(Terrainsprite)
   Collisions->>Player: .rect.center
   Player-->>Collisions: tuple
   Collisions->>Terrainsprite: .rect.center
