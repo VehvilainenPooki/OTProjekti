@@ -69,9 +69,10 @@ class Movement:
         dist_x = math.dist([p_pos[0]], [c_pos[0]])
         dist_y = math.dist([p_pos[1]], [c_pos[1]])
         if dist_p_c == 0:
+            self.player.add_pos(1, 1)
             return
-        dist_x = dist_x*(p_c_overlap/dist_p_c)
-        dist_y = dist_y*(p_c_overlap/dist_p_c)
+        dist_x = math.ceil(dist_x*(p_c_overlap/dist_p_c))
+        dist_y = math.ceil(dist_y*(p_c_overlap/dist_p_c))
         #Checking which direction to move the player
         if p_pos[0] < c_pos[0]:
             dist_x = -dist_x
