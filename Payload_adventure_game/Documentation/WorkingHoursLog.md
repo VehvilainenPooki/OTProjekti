@@ -21,4 +21,4 @@
 ||15:00-18:00|Cleaning up code and working on the directory structure|
 ||18:00-21:00|Writing tests|
 |-----------|-----------|-----------|
-||8:00:00|<-Total time spent on the project|
+||23:20:00|<-Total time spent on the project|
