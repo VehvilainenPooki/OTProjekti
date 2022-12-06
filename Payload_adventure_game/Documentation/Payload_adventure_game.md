@@ -27,3 +27,22 @@
 - Tasohyppely elementtejä
 - Enemmän päivityksiä pelaajalle ja vaunulle
 - Kauniimpi ulkoasu
+
+## Pelaajan törmäys Terrainspriteen
+
+```mermaid
+sequenceDiagram
+  participant gameloop
+  participant Collisions
+  actor Player
+  participant Terrainsprite
+  participant Movement
+  Player->>Collisions: are_colliding(Terrainsprite)
+  Collisions->>Player: .rect.center
+  Player-->>Collisions: tuple
+  Collisions->>Terrainsprite: .rect.center
+  Terrainsprite-->>Collisions: tuple
+  Collisions-->>gameloop: True
+  gameloop->>Movement: remove_collision(Terrainsprite)
+  Movement->>Player: set_pos(x,y)
+```
