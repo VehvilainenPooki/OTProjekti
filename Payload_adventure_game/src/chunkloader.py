@@ -16,8 +16,9 @@ class ChunkLoader:
 
     def _initialize_sprites(self, level_map):
         self.player = Player(100, 100, 50, 20)
-        self.terrainsprites.add(TerrainSprite(400,200, 200))
-        self.terrainsprites.add(TerrainSprite(650,100,50))
+        self.terrainsprites.add(TerrainSprite(400,-260, 100))
+        self.terrainsprites.add(TerrainSprite(400,200, 100))
+        self.terrainsprites.add(TerrainSprite(700,100,100))
 
 
         self.groud_sprites.add(

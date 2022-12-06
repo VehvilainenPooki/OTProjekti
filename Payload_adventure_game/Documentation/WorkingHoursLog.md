@@ -13,5 +13,9 @@
 |4.12.22|15:15-17:00|working on the movement script|
 |4.12.22|17:30-18:00|Working on the camera|
 |4.12.22|20:00-21:00|Working on sprite collision|
+|5.12.22|16:30-18.00|Completed simple sprite collision|
+|6.12.22|11:20-11:50|Fixed rendering bug with collision|
+|6.12.22|11:50-12:20|Made the window borderless and made [esc] the exit key|
+||12:20-12:30|Made game fullscreen(1080p) and made camera dynamically center to any resolution|
 |------|------|------|
 ||8:00:00|<-Total time spent on the project|
