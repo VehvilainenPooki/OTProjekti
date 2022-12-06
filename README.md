@@ -32,7 +32,11 @@ Run coverage-report:
 ```bash
 poetry run invoke coverage-report
 ```
-Auto format to pep8:
+Run Pylint code analysis:
+```bash
+poetry run invoke lint
+```
+Auto format to PEP8:
 ```bash
 poetry run invoke format
 ```
