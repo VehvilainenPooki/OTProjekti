@@ -21,5 +21,8 @@
 ||15:00-18:00|Cleaning up code and working on the directory structure|
 ||18:00-21:00|Writing tests|
 |13.12.22|16:00-17:00|Making directory changes to better represent the structure and added game directory to fix relative imports|
+||17:00-19:20|Making player rotate towards the pointer. -> Achieved a terrible prototype.|
+||19:20-20:20|Adding Docstrings to the code.|
+||20:20-21:40|Working on test. Started testing Movement.py|
 ||||
-||24:20:00|<-Total time spent on the project|
+||28:00:00|<-Total time spent on the project|

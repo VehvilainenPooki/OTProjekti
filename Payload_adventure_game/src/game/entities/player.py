@@ -7,25 +7,40 @@ dirname = os.path.dirname(__file__)
 
 
 class Player(pygame.sprite.Sprite):
-    def __init__(self, starting_x = 0, starting_y = 0, player_radius = 10, player_health = 20):
+    """Class that gives the primary information about the player
 
+    Args:
+        pygame (Sprite): pygame Sprite Super
+    """
+
+    def __init__(self, starting_x=0, starting_y=0, player_radius=10, player_health=20):
+        """Classes constructor which creates the player
+
+        Args:
+            starting_x (int, optional): Player starting position X. Defaults to 0.
+            starting_y (int, optional): Player starting position Y. Defaults to 0.
+            player_radius (int, optional): Player hitbox radius. Defaults to 10.
+            player_health (int, optional): Player max health. Defaults to 20.
+        """
         super() .__init__()
 
         self.posx = starting_x
         self.posy = starting_y
         self.hitbox_radius = player_radius
-        self.health = player_health
+        self.max_health = player_health
 
         self.image = pygame.image.load(
             os.path.join(dirname, "..", "assets", "player", "player.png")
         )
 
-        self.image = pygame.transform.scale(self.image, (self.hitbox_radius*2,self.hitbox_radius*2))
+        self.image = pygame.transform.scale(
+            self.image, (self.hitbox_radius*2, self.hitbox_radius*2))
 
-        self.rect = pygame.Rect((self.posx, self.posy),(self.hitbox_radius*2,self.hitbox_radius*2))
+        self.rect = pygame.Rect((self.posx, self.posy),
+                                (self.hitbox_radius*2, self.hitbox_radius*2))
 
     def get_pos(self):
-        return (self.posx, self.posy)
+        return (self.rect.x, self.rect.y)
 
     def set_pos(self, new_x, new_y):
         self.posx = new_x
