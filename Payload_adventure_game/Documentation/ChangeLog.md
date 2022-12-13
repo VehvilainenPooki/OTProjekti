@@ -1,6 +1,5 @@
 # ChangeLog
 ## Week 3
-##### 22.11.22
 #### Added pygame and invoke to project and pytest coverage to dev
 #### A basic movement framework implemented 
 #### Changed GitHub page to represent project
@@ -21,3 +20,4 @@
 #### Added test code to add mouse tracking and some logic to add a custom cursor
 #### Cleaned up code using pylint
 #### Wrote tests to test collisioms.py and movement.remove_collision()
+## Week 6

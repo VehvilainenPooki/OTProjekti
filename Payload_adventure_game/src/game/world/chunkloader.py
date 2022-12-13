@@ -1,7 +1,7 @@
 import pygame
 
-from .player import Player
-from .terrainsprite import TerrainSprite
+from ..entities.player import Player
+from ..entities.terrainsprite import TerrainSprite
 
 
 
@@ -24,7 +24,7 @@ class ChunkLoader:
 
         self.ground_sprites.add(
             self.terrainsprites
-            #tbd rocks
+            #todo: rocks
         )
 
         self.all_sprites.add(

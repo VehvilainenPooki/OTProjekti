@@ -2,11 +2,11 @@ import os
 
 import pygame
 
-from logic.chunkloader import ChunkLoader
-from logic.movement import Movement
-from logic.collisions import Collisions
+from game.world.chunkloader import ChunkLoader
+from game.logic.movement import Movement
+from game.logic.collisions import Collisions
 
-from rendering.camera import Camera
+from game.rendering.camera import Camera
 
 dirname = os.path.dirname(__file__)
 
@@ -50,13 +50,13 @@ def main():
         #Checking circle collision
         for sprite in chunkloader.ground_sprites:
             if collisions.are_colliding(sprite):
-                movement.remove_collision(sprite)
+                collisions.remove_collision(sprite)
 
 
         m_pos = pygame.mouse.get_pos()
         pointer = pygame.sprite.Sprite()
         pointer.image = pygame.image.load(
-            os.path.join(dirname, "assets", "mouse", "pointer.png")
+            os.path.join(dirname, "game", "assets", "mouse", "pointer.png")
         )
         pointer.image = pygame.transform.scale(pointer.image, (32,32))
 

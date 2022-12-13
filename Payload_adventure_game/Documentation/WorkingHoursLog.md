@@ -20,5 +20,6 @@
 ||12:30-13:30|Working on mouse controls|
 ||15:00-18:00|Cleaning up code and working on the directory structure|
 ||18:00-21:00|Writing tests|
+|13.12.22|16:00-17:00|Making directory changes to better represent the structure and added game directory to fix relative imports|
 ||||
-||23:20:00|<-Total time spent on the project|
+||24:20:00|<-Total time spent on the project|
