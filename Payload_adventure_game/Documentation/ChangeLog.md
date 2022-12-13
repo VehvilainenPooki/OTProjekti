@@ -24,3 +24,4 @@
 #### Reworked the directory structure again.
 #### Added src/game/ parent folder to fir relative import issues.
 #### Added Docstrings to the code. 
+#### Improved testing. Added tests for Movement.py
