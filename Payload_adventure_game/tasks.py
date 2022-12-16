@@ -2,11 +2,11 @@ from invoke import  task
 
 @task
 def start(ctx):
-    ctx.run("python src/Payload_adventure_game.py", pty=True)
+    ctx.run("python src/payload_adventure_game.py", pty=True)
 
 @task
 def test(ctx):
-    ctx.run("python pytest src", pty=True)
+    ctx.run("pytest src", pty=True)
 
 @task
 def coverage_report(ctx):
