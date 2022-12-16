@@ -1,35 +1,34 @@
-# Vaatimusmäärittely
-## Pelin tarkoitus
-### Peli, joka on keskittynyt "Payload" vaunun ympärille. Kuljetaan erilaisten alueiden läpi puolustaen vaunuja, keräten resursseja ja päivittäen erilaisia hahmon ja vaunun ominaisuuksi. Peli on Roguelike Escort mission.
-## Käyttäjät
-### Peli on yksinpeli, johon ei ole tarkoitus implementoida "god" tai admin tilaa.
-## käyttöliittymäluonnos
-### Peli on ylhäältäpäin kuvattu 2D maailma, jossa kamera seuraa pelaajaa
-### Pelissä on alkuruutu ja mahdollisuus vaihtaa asetuksia.
-## Perusversion tarjoama toiminnallisuus
-- Alkuruutu
-  - Pelin aloitus nappula
-  - Asetukset
-- Peli
-  - Peli hyppää suoraan pelaamiseen
-  - vaunu liikkuu pelaajan halutessa
-  - vihollisia
-  - kerättäviä resursseja
-  - 3 erilaista tutkittavaa aluetta
-  - 2 päivitystä pelaajalle
-  - 2 päivitystä vaunulle
+# Requirements specification
+## The games idea
+The game is based on the payload mission trope. You have a payload that you protect while it moves slowly towards the objective. In this game you protect your caravan on a journey through different areas varying in enemies, resources and difficulty. You could describe it as a Roguelike Payload mission.
+## Users
+The game is a singleplayer game with no other gamemodes or features like "god mode"
+## User interface
+The game has a top down 2D view with the camera following the player.
+The game has a start screen with an options menu.
+## Base game featureset
+- start screen
+  - Start button
+  - Settings
+- game
+  - Start button jumps straight into gameplay
+  - Player can start and stop the caravan movement at any moment.
+  - enemies
+  - Collectable resources
+  - 3 areas to explore
+  - 2 upgrades for the player
+  - 2 upgrades for the caravan
   
 ![http://url/to/img.png](https://raw.githubusercontent.com/VehvilainenPooki/OTProjekti/main/Payload_adventure_game/Documentation/Images/Luonnos.png)
-## Jatkokehitysideoita
-### Perusversion jälkeen järjestelmää täydennetään ajan salliessa esim. seuraavilla toiminnallisuuksilla:
-- Useampia vihollistyyppejä
-- Useampia resursseja
-- Tasohyppely elementtejä
-- Enemmän päivityksiä pelaajalle ja vaunulle
-- Kauniimpi ulkoasu
+## Further development ideas
+- Multiple enemy types
+- multiple resource types
+- Platforming elements
+- More upgrades for the player and the caravan
+- Better graphics
 
-## Pelaajan törmäys Terrainspriteen
-
+## Example logic sequence diagram: Player collision with terrainsprite
+On every frame the game checks if the player is colliding with anything. If there is a collision then the game chooses what to do. In this case it runs the method remove_collision(terrainsprite) which moves the player so it just touches it.
 ```mermaid
 sequenceDiagram
   participant gameloop
