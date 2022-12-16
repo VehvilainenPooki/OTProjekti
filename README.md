@@ -10,6 +10,13 @@
 ### [Working Hours Log](https://github.com/VehvilainenPooki/OTProjekti/blob/main/Payload_adventure_game/Documentation/WorkingHoursLog.md)
 ### [ChangeLog](https://github.com/VehvilainenPooki/OTProjekti/blob/main/Payload_adventure_game/Documentation/ChangeLog.md)
 ### [Release](https://github.com/VehvilainenPooki/OTProjekti/releases/tag/viikko5)
+## Controls
+At this point in time the game has these controls:
+- [WASD]: Moves the player around
+- [SHIFT]: Makes the player sprint (move faster)
+- [CTRL]: Makes the player sneak (move slower)
+- [SPACE]: Makes the player do a short dash in the current movement direction. This has a 30 frame cooldown.
+- [Mouse_position]: Rotates the player to look at the pointer. This is WIP and real jank.
 ## Install
 1. Install dependencies with:
 ```bash
