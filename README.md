@@ -1,6 +1,6 @@
 ###### This is an WIP project that is being developed for a course from the University of Helsinki https://ohjelmistotekniikka-hy.github.io/
 # Payload_adventure_game
-### Game with a take on the classic payload mission. Travel a world while protecting your waggon, collecting resource, and unlocking new abilities.
+### Game with a take on the classic payload mission. Travel a world while protecting your waggon, collecting resources, and unlocking new abilities.
 ## About Python version
 ### This project is being developed in python 3.8.10. It might have issues if ran with an older version of python.
 ## Documentation
