@@ -15,6 +15,7 @@ class Collisions:
         self.p_radius = self.player.get_hitbox_r()
 
     def are_colliding(self, circle):
+        #todo: Change so this receives both colliders as args
         """Checks if player and an entity are colliding. Uses circle collision.
 
         Args:
@@ -30,6 +31,7 @@ class Collisions:
         return False
 
     def remove_collision(self, circle):
+        #todo: Change so this receives both colliders as args
         """Removes the collision of the player and an entity
 
         Args:
