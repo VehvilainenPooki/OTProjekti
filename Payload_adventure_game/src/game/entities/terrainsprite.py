@@ -11,28 +11,33 @@ class TerrainSprite(pygame.sprite.Sprite):
         pygame (Sprite): Pygame sprite super
     """
 
-    def __init__(self, pos_x=0, pos_y=0, radius=20):
+    def __init__(self, pos_x, pos_y, hitbox_radius, sprite_size, sprite_image_index):
         """Classes constructor which creates an instance of a TerrainSprite
 
         Args:
-            pos_x (int, optional): X coordinate of the sprite. Defaults to 0.
-            pos_y (int, optional): Y coordinate of the sprite. Defaults to 0.
-            radius (int, optional): Radius of the sprite. Defaults to 20.
+            pos_x (int, optional): X coordinate of the sprite.
+            pos_y (int, optional): Y coordinate of the sprite.
+            radius (int, optional): Radius of the sprite.
         """
         self.posx = pos_x
         self.posy = pos_y
-        self.hboxr = radius
+        self.hitbox_radius = hitbox_radius
+        self.sprite_size = sprite_size
+        self.image_index = int(sprite_image_index)
 
         super().__init__()
 
         self.image = pygame.image.load(
-            os.path.join(dirname, "..", "assets", "trees", "tree1.png")
+            os.path.join(dirname, "..", "assets", "trees", "tree" + str(self.image_index)+ ".png")
         )
 
         self.image = pygame.transform.scale(
-            self.image, (self.hboxr*4, self.hboxr*4))
+            self.image, (self.sprite_size, self.sprite_size))
         self.rect = pygame.Rect((self.posx, self.posy),
-                                (self.hboxr*4, self.hboxr*4))
+                                (self.sprite_size, self.sprite_size))
 
     def get_hitbox_r(self):
-        return self.hboxr
+        return self.hitbox_radius
+
+    def get_rendering_pos(self):
+        return (self.posx, self.posy)

@@ -20,11 +20,11 @@ class Pointer(pygame.sprite.Sprite):
 
         self.pointer_angle = 0
 
-        self.image = pygame.image.load(
+        self.original_image = pygame.image.load(
             os.path.join(dirname, "..", "assets", "mouse", "pointer.png")
         )
-
-        self.image = pygame.transform.scale(self.image, (32, 32))
+        
+        self.image = pygame.transform.scale(self.original_image, (32, 32))
 
         self.rect = self.image.get_rect()
 
@@ -33,10 +33,7 @@ class Pointer(pygame.sprite.Sprite):
         """
         m_pos = pygame.mouse.get_pos()
 
-        self.image = pygame.image.load(
-            os.path.join(dirname, "..", "assets", "mouse", "pointer.png")
-        )
-        self.image = pygame.transform.scale(self.image, (32, 32))
+        self.image = pygame.transform.scale(self.original_image, (32, 32))
 
         self.image = pygame.transform.rotate(self.image, self.pointer_angle)
         self.pointer_angle -= 1
@@ -45,4 +42,11 @@ class Pointer(pygame.sprite.Sprite):
         self.rect = (m_pos[0]-i_size[0], m_pos[1]-i_size[1])
 
     def get_pos(self):
-        return self.rect
+        i_size = self.image.get_rect().center
+        pos = (self.rect[0]+i_size[0],self.rect[1]+i_size[1])
+        return pos
+    
+    def get_rendering_pos(self):
+        i_size = self.image.get_rect().center
+        pos = (self.rect[0]-i_size[0],self.rect[1]-i_size[1])
+        return pos

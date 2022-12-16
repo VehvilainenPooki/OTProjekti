@@ -123,15 +123,12 @@ class Movement:
         """
         po_pos = self.pointer.get_pos()
 
-        pl_scalar_angle = math.atan2(
+        pl_angle = math.atan2(
             960-po_pos[0], 540-po_pos[1])*(180/math.pi)
 
-        self.player.image = pygame.image.load(
-            os.path.join(dirname, "..", "assets", "player", "player.png")
-        )
-
+        
         self.player.image = pygame.transform.scale(
-            self.player.image, (self.player.hitbox_radius*2, self.player.hitbox_radius*2))
+            self.player.get_original_image(), (self.player.hitbox_radius*2, self.player.hitbox_radius*2))
 
         self.player.image = pygame.transform.rotate(
-            self.player.image, pl_scalar_angle)
+            self.player.image, pl_angle)

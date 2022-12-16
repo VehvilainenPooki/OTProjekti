@@ -29,18 +29,23 @@ class Player(pygame.sprite.Sprite):
         self.hitbox_radius = player_radius
         self.max_health = player_health
 
-        self.image = pygame.image.load(
+        self.original_image = pygame.image.load(
             os.path.join(dirname, "..", "assets", "player", "player.png")
         )
 
         self.image = pygame.transform.scale(
-            self.image, (self.hitbox_radius*2, self.hitbox_radius*2))
+            self.original_image, (self.hitbox_radius*2, self.hitbox_radius*2))
 
         self.rect = pygame.Rect((self.posx, self.posy),
                                 (self.hitbox_radius*2, self.hitbox_radius*2))
 
     def get_pos(self):
         return (self.rect.x, self.rect.y)
+    
+    def get_rendering_pos(self):
+        i_size = self.image.get_rect().center
+        pos = (self.rect[0]-i_size[0]+self.hitbox_radius,self.rect[1]-i_size[1]+self.hitbox_radius)
+        return pos
 
     def set_pos(self, new_x, new_y):
         self.posx = new_x
@@ -56,3 +61,6 @@ class Player(pygame.sprite.Sprite):
 
     def get_hitbox_r(self):
         return self.hitbox_radius
+
+    def get_original_image(self):
+        return self.original_image

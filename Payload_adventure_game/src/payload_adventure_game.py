@@ -58,8 +58,9 @@ def main():
         screen.blit(background, (0, 0))
         cam_offset = cam.get_pos()
         for sprite in chunkloader.all_sprites:
-            screen.blit(sprite.image, (sprite.rect.x -
-                        cam_offset[0], sprite.rect.y-cam_offset[1]))
+            s_pos = sprite.get_rendering_pos()
+            screen.blit(sprite.image, (s_pos[0] -
+                        cam_offset[0], s_pos[1]-cam_offset[1]))
 
         screen.blit(pointer.image, pointer.rect)
 
