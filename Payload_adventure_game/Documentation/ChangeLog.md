@@ -25,3 +25,8 @@
 #### Added src/game/ parent folder to fir relative import issues.
 #### Added Docstrings to the code. 
 #### Improved testing. Added tests for Movement.py
+## Week 7
+#### Cleaned up the repository to have only english and updated requirements_specification.md to represent current goals.
+#### Made collisions take both colliders as arguements. before it used player always as the other one.
+#### Made tests work again. Had some new args to classes so added them to the tests.
+#### 

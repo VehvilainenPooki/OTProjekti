@@ -23,6 +23,10 @@
 |13.12.22|16:00-17:00|Making directory changes to better represent the structure and added game directory to fix relative imports|
 ||17:00-19:20|Making player rotate towards the pointer. -> Achieved a terrible prototype.|
 ||19:20-20:20|Adding Docstrings to the code.|
-||20:20-21:40|Working on test. Started testing Movement.py|
+||20:20-21:40|Working on tests. Started testing Movement.py|
+|16.12.22|11:00-12:00|Cleaning up the repository.|
+||12:00-14:00|Fixed player looking at pointer. Was at a workshop and talked about handling unfinished project|
+|17.12.22|2:00:00|Made collisions take both colliders as arguements. before it used player always as the other one. Made tests work again.|
+|18.12.22|13:00-15:10|Starting to make menus.|
 ||||
-||28:00:00|<-Total time spent on the project|
+||-:00:00|<-Total time spent on the project|
