@@ -5,7 +5,7 @@ import pygame
 from ..entities.player import Player
 from ..entities.pointer import Pointer
 
-from ..entities.terrainsprite import TerrainSprite
+from ..entities.terrainSprite import TerrainSprite
 
 dirname = os.path.dirname(__file__)
 

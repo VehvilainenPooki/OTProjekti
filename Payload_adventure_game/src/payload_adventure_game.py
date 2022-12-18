@@ -14,6 +14,7 @@ dirname = os.path.dirname(__file__)
 def main():
     # Initialising window
     resolution = (1920, 1080)
+    #resolution = (720, 576)
     pygame.init()
     screen = pygame.display.set_mode(resolution, pygame.NOFRAME)
     pygame.display.set_caption("Playload_adventure_game")
@@ -22,6 +23,7 @@ def main():
     pygame.mouse.set_visible(False)
 
     background = pygame.Surface(resolution)
+    background.fill((50,100,50))
 
     # Loading first chunk
     chunkloader = ChunkLoader(1)
@@ -51,8 +53,8 @@ def main():
 
         # Checking circle collision
         for sprite in chunkloader.ground_sprites:
-            if collisions.are_colliding(sprite):
-                collisions.remove_collision(sprite)
+            if collisions.are_colliding(player, sprite):
+                collisions.remove_collision(player, sprite)
 
         # Drawing frame
         screen.blit(background, (0, 0))
@@ -72,3 +74,25 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+    """Todo:
+    - create index.py and clean up this mess
+    - ui
+        -menu
+        -settings
+        -pause menu
+    - resolution scaling
+    - mobs
+        -ai
+        -textures
+        attack
+        -taking damage
+    - player
+        -attack
+        -taking damage
+    - payload
+        -movement
+        -damage
+        -interaction
+    """

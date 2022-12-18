@@ -14,35 +14,36 @@ class Collisions:
         self.player = game_player
         self.p_radius = self.player.get_hitbox_r()
 
-    def are_colliding(self, circle):
-        #todo: Change so this receives both colliders as args
-        """Checks if player and an entity are colliding. Uses circle collision.
+    def are_colliding(self, circle1, circle2):
+        """Checks if two entities are colliding. Uses circle collision.
 
         Args:
-            circle (Sprite): The sprite of an entity
+            circle1 (Sprite): The sprite of an entity
+            circle2 (Sprite): The sprite of an entity
 
         Returns:
-            bool: Returns if the entities are colliding
+            bool: Returns True if the entities are colliding
         """
-        dist_p_c = math.dist(self.player.rect.center, circle.rect.center)
-        c_radius = circle.get_hitbox_r()
+        dist_p_c = math.dist(circle1.rect.center, circle2.rect.center)
+        c_radius = circle2.get_hitbox_r()
         if self.p_radius+c_radius > dist_p_c:
             return True
         return False
 
-    def remove_collision(self, circle):
+    def remove_collision(self, moving, static):
         #todo: Change so this receives both colliders as args
-        """Removes the collision of the player and an entity
+        """Removes the collision of two entities.
+            The method will only move the moving args sprite.
 
         Args:
             circle (Sprite): The sprite of an entity
         """
         # Checking how much to move the player
-        p_pos = self.player.rect.center
-        c_pos = circle.rect.center
+        p_pos = moving.rect.center
+        c_pos = static.rect.center
         dist_p_c = math.dist(p_pos, c_pos)
-        c_radius = circle.get_hitbox_r()
-        p_c_overlap = (self.player.get_hitbox_r()+c_radius)-dist_p_c
+        c_radius = static.get_hitbox_r()
+        p_c_overlap = (moving.get_hitbox_r()+c_radius)-dist_p_c
 
         # If the entities aren't actually colliding
         if p_c_overlap < 0:
@@ -53,7 +54,7 @@ class Collisions:
 
         # If the entities are directly on to of each other
         if dist_p_c == 0:
-            self.player.add_pos(1, 1)
+            moving.add_pos(1, 1)
             return
 
         # Rounding up to make sure the collision is removed
@@ -67,4 +68,4 @@ class Collisions:
             dist_y = -dist_y
 
         # Moving the player
-        self.player.add_pos(dist_x, dist_y)
+        moving.add_pos(dist_x, dist_y)

@@ -2,14 +2,14 @@ import unittest
 
 from ..entities.player import Player
 from ..logic.collisions import Collisions
-from ..entities.terrainsprite import TerrainSprite
+from ..entities.terrainSprite import TerrainSprite
 
 
 class TestCollision(unittest.TestCase):
     def setUp(self):
         self.player = Player()
         self.collisions = Collisions(self.player)
-        self.circle = TerrainSprite(200, 200, 50)
+        self.circle = TerrainSprite(200, 200, 50, 200, 1)
 
     def test_no_collision(self):
         self.assertEqual(self.collisions.are_colliding(self.circle), False)
