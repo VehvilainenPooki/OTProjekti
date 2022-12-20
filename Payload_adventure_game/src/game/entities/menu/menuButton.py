@@ -12,17 +12,19 @@ class MenuButton(pygame.sprite.Sprite):
         pygame (Sprite): pygame Sprite Super
     """
 
-    def __init__(self, path, pos_x=0, pos_y=0, scale=1):
+    def __init__(self, path, action, pos_x=0, pos_y=0, scale=1):
         """Classes constructor which makes a menu button
 
         Args:
-            image (path): the path to the buttons texture.
+            image (path): The path to the buttons texture.
+            action (str): Action that the button does.
             pos_x (int, optional): Player starting position X. Defaults to 0.
             pos_y (int, optional): Player starting position Y. Defaults to 0.
             scale (int, optional): Scale of the sprite compared to the image. Defaults to 1.
         """
         super() .__init__()
         self.scale = scale
+        self.action = action
 
         self.original_image = pygame.image.load(path)
         w,h = self.original_image.get_size()
@@ -33,11 +35,18 @@ class MenuButton(pygame.sprite.Sprite):
             self.original_image, self.size)
         self.rect = pygame.Rect((pos_x, pos_y), self.size)
 
+    def button_action(self):
+        return self.action
+
     def pointer_is_on(self):
         self._add_button_brightness()
 
     def pointer_is_off(self):
         self._restore_button_brightness()
+
+    def on_mouse_pressed(self):
+        self._restore_button_brightness()
+        self._reduce_button_brightness()
 
     def _add_button_brightness(self):
         w, h = self.image.get_size()
@@ -46,6 +55,15 @@ class MenuButton(pygame.sprite.Sprite):
                 pixel = self.image.get_at((x,y))
                 if pixel[3] > 0:
                     self.image.set_at((x,y),pygame.Color(self._change_color_value(pixel[0], 50),self._change_color_value(pixel[1], 50),self._change_color_value(pixel[2], 50),pixel[3]))
+
+    def _reduce_button_brightness(self):
+        w, h = self.image.get_size()
+        for x in range(w):
+            for y in range(h):
+                pixel = self.image.get_at((x,y))
+                if pixel[3] > 0:
+                    self.image.set_at((x,y),pygame.Color(self._change_color_value(pixel[0], -50),self._change_color_value(pixel[1], -50),self._change_color_value(pixel[2], -50),pixel[3]))
+
 
     def _restore_button_brightness(self):
         self.image = pygame.transform.scale(

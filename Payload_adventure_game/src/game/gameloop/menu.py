@@ -16,9 +16,9 @@ class Menu():
         self.cooldown = 0
         self.bright = False
 
-        self.start_button = MenuButton(os.path.join(dirname, "..", "assets", "menu", "start.png"), 100, 100, 10)
+        self.start_button = MenuButton(os.path.join(dirname, "..", "assets", "menu", "start.png"), "Start", 100, 100, 10)
 
-        self.settings_button = MenuButton(os.path.join(dirname, "..", "assets", "menu", "settings.png"), 100, 300, 10)
+        self.settings_button = MenuButton(os.path.join(dirname, "..", "assets", "menu", "settings.png"), "Settings", 100, 300, 10)
 
         self.mainmenu_buttons = pygame.sprite.Group()
         self.mainmenu_buttons.add(
@@ -37,9 +37,10 @@ class Menu():
             # Exit event
             running = self._is_running()
 
-            self._update_mouse()
-
-            self.draw(self.mainmenu_buttons)
+            action = self._update_mouse()
+            if action == "Start":
+                return "Start"
+            self._draw(self.mainmenu_buttons)
 
             pygame.display.update()
             self.clock.tick(60)
@@ -54,7 +55,20 @@ class Menu():
     
     def _update_mouse(self):
         pos = pygame.mouse.get_pos()
+        pygame.event.get()
+        pressed = pygame.mouse.get_pressed(3)[0]
 
+        self._mouse_collision(pos)
+
+        if pressed:
+            return self._interact_with_mouse()
+        
+
+    def _draw(self, group):
+        for button in group:
+            self.screen.blit(button.get_image(), button.get_rect())
+
+    def _mouse_collision(self, pos):
         for button in self.under_mouse_buttons:
             if not button.rect.collidepoint(pos):
                 button.pointer_is_off()
@@ -66,6 +80,8 @@ class Menu():
                     button.pointer_is_on()
                     self.under_mouse_buttons.add(button)
 
-    def draw(self, group):
-        for button in group:
-            self.screen.blit(button.get_image(), button.get_rect())
+    def _interact_with_mouse(self):
+        group = self.under_mouse_buttons.sprites()
+        if len(group) == 1:
+            return group[0].button_action()
+        return "F"
