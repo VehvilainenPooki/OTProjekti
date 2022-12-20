@@ -2,6 +2,8 @@ import os
 
 import pygame
 
+from ..entities.menu.menuButton import MenuButton
+
 dirname = os.path.dirname(__file__)
 
 class Menu():
@@ -11,16 +13,22 @@ class Menu():
         self.screen = screen
         pygame.mouse.set_visible(True)
 
-        self.start_button = pygame.sprite.Sprite()
+        self.cooldown = 0
+        self.bright = False
 
-        self.start_button.image = pygame.image.load(
-            os.path.join(dirname, "..", "assets", "menu", "startbg.png")
+        self.start_button = MenuButton(os.path.join(dirname, "..", "assets", "menu", "start.png"), 100, 100, 10)
+
+        self.settings_button = MenuButton(os.path.join(dirname, "..", "assets", "menu", "settings.png"), 100, 300, 10)
+
+        self.mainmenu_buttons = pygame.sprite.Group()
+        self.mainmenu_buttons.add(
+            self.start_button,
+            self.settings_button
         )
 
-        self.start_button.image = pygame.transform.scale(
-            self.start_button.image, (22*10, 10*10))
+        self.settingsmenu_buttons = pygame.sprite.Group()
 
-        self.start_button.rect = pygame.Rect((100, 100), (100,100))
+        self.under_mouse_buttons = pygame.sprite.Group()
 
 
     def mainmenu_screen(self):
@@ -29,7 +37,9 @@ class Menu():
             # Exit event
             running = self._is_running()
 
-            self.screen.blit(self.start_button.image, self.start_button.rect)
+            self._update_mouse()
+
+            self.draw(self.mainmenu_buttons)
 
             pygame.display.update()
             self.clock.tick(60)
@@ -41,5 +51,21 @@ class Menu():
                 if event.type == pygame.QUIT or pygame.key.get_pressed()[pygame.K_ESCAPE]:
                     return False
         return True
+    
+    def _update_mouse(self):
+        pos = pygame.mouse.get_pos()
 
+        for button in self.under_mouse_buttons:
+            if not button.rect.collidepoint(pos):
+                button.pointer_is_off()
+                self.under_mouse_buttons.remove(button)
 
+        for button in self.mainmenu_buttons:
+            if not self.under_mouse_buttons.has(button):
+                if button.rect.collidepoint(pos):
+                    button.pointer_is_on()
+                    self.under_mouse_buttons.add(button)
+
+    def draw(self, group):
+        for button in group:
+            self.screen.blit(button.get_image(), button.get_rect())

@@ -28,5 +28,6 @@
 ||12:00-14:00|Fixed player looking at pointer. Was at a workshop and talked about handling unfinished project|
 |17.12.22|2:00:00|Made collisions take both colliders as arguements. before it used player always as the other one. Made tests work again.|
 |18.12.22|13:00-15:10|Starting to make menus.|
+|20.12.22|8:00-11:20|Working on the menus. Added on mouse hover light up for the buttons.|
 ||||
 ||-:00:00|<-Total time spent on the project|
