@@ -1,0 +1,7 @@
+move up: [w]
+move down: [s]
+move right: [d]
+move left: [a]
+sprint: [shift]
+sneak: [ctrl]
+dash: [space]

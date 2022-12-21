@@ -10,22 +10,30 @@ dirname = os.path.dirname(__file__)
 class GameloopHandler():
     def __init__(self):
         # Initialising window
-        resolution = (1920, 1080)
+        self.resolution = (1920, 1080)
         #resolution = (720, 576)
-        screen = pygame.display.set_mode(resolution, pygame.NOFRAME)
+        self.screen = pygame.display.set_mode(self.resolution, pygame.NOFRAME)
         pygame.display.set_caption("Playload_adventure_game")
-        clock = pygame.time.Clock()
+        self.clock = pygame.time.Clock()
 
 
-        background = pygame.Surface(resolution)
+        background = pygame.Surface(self.resolution)
         background.fill((100,100,100))
 
         self.adventure = Adventure()
-        self.menu = Menu(clock, screen)
+        self.menu = Menu(self.clock, self.screen)
 
         pygame.init()
 
-    def start(self):
-        action = self.menu.mainmenu_screen()
-        if action == "Start":
-            self.adventure.gameloop()
+    def start_menu(self):
+        running = True
+        while running:
+            pygame.mouse.set_visible(True)
+            action = self.menu.mainmenu_screen()
+            if action == "Start":
+                self.adventure.gameloop(self.clock, self.screen, self.resolution)
+            elif action == "Settings":
+                self.menu.settingsmenu_screen()
+            elif action == "Quit":
+                running = False
+        pygame.quit()

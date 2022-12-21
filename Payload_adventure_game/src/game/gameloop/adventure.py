@@ -12,15 +12,7 @@ dirname = os.path.dirname(__file__)
 
 class Adventure():
 
-    def gameloop(self):
-        # Initialising window
-        resolution = (1920, 1080)
-        #resolution = (720, 576)
-        pygame.init()
-        screen = pygame.display.set_mode(resolution, pygame.NOFRAME)
-        pygame.display.set_caption("Playload_adventure_game")
-        clock = pygame.time.Clock()
-
+    def gameloop(self, clock, screen, resolution):
         pygame.mouse.set_visible(False)
 
         background = pygame.Surface(resolution)
@@ -68,11 +60,9 @@ class Adventure():
             pygame.display.update()
             clock.tick(60)
 
-        pygame.quit()
-
     def _is_running(self):
         for event in pygame.event.get():
-                if event.type == pygame.QUIT or pygame.key.get_pressed()[pygame.K_ESCAPE]:
+                if event.type == pygame.QUIT or (event.__dict__.get("key") == 27 and event.type == 768):
                     return False
         return True
 

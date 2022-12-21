@@ -44,10 +44,11 @@ class MenuButton(pygame.sprite.Sprite):
     def pointer_is_off(self):
         self._restore_button_brightness()
 
+    """
     def on_mouse_pressed(self):
         self._restore_button_brightness()
         self._reduce_button_brightness()
-
+    """
     def _add_button_brightness(self):
         w, h = self.image.get_size()
         for x in range(w):
@@ -55,7 +56,7 @@ class MenuButton(pygame.sprite.Sprite):
                 pixel = self.image.get_at((x,y))
                 if pixel[3] > 0:
                     self.image.set_at((x,y),pygame.Color(self._change_color_value(pixel[0], 50),self._change_color_value(pixel[1], 50),self._change_color_value(pixel[2], 50),pixel[3]))
-
+    """
     def _reduce_button_brightness(self):
         w, h = self.image.get_size()
         for x in range(w):
@@ -63,7 +64,7 @@ class MenuButton(pygame.sprite.Sprite):
                 pixel = self.image.get_at((x,y))
                 if pixel[3] > 0:
                     self.image.set_at((x,y),pygame.Color(self._change_color_value(pixel[0], -50),self._change_color_value(pixel[1], -50),self._change_color_value(pixel[2], -50),pixel[3]))
-
+    """
 
     def _restore_button_brightness(self):
         self.image = pygame.transform.scale(

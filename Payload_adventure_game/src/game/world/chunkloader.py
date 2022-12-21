@@ -62,6 +62,7 @@ class ChunkLoader:
                 continue
             if parts[0] == "Tree":
                 self.init_tree(parts)
+        zone.close()
 
     def init_player(self, data):
         pos = data[1].split(",")
