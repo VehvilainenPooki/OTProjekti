@@ -30,5 +30,8 @@
 |18.12.22|13:00-15:10|Starting to make menus.|
 |20.12.22|8:00-11:20|Working on the menus. Added on mouse hover light up for the buttons.|
 |21.12.22|10:00-15:00|Working on the menus. Menu controls work now properly.|
+|22.12.22|10:00-13:00|Working on resolution scaling.-> Menu scaling works.|
+||13:00-14:00|Integrating scaling into game.|
+||17:00-18:00|Separating rendering from game logic. WIP|
 ||||
 ||-:00:00|<-Total time spent on the project|

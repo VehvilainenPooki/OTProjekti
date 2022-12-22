@@ -2,7 +2,7 @@ class Camera:
     """Class that handles moving the view so that the player is in the middle.
     """
 
-    def __init__(self, game_player, reso):
+    def __init__(self, game_player, reso, scale):
         """Classes constructor which creates the Camera
 
         Args:
@@ -15,6 +15,7 @@ class Camera:
         self.resolution = reso
         self.posx = pos[0]
         self.posy = pos[1]
+        self.scale = scale
 
     def get_pos(self):
         """Returns the current location of the camera object
@@ -26,3 +27,7 @@ class Camera:
         self.posx = p_pos[0] - (self.resolution[0]/2-self.p_radius)
         self.posy = p_pos[1] - (self.resolution[1]/2-self.p_radius)
         return (self.posx, self.posy)
+
+    def update_scaling(self, reso, scale):
+        self.resolution = reso
+        self.scale = scale

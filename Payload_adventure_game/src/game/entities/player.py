@@ -33,8 +33,7 @@ class Player(pygame.sprite.Sprite):
             os.path.join(dirname, "..", "assets", "player", "player.png")
         )
 
-        self.image = pygame.transform.scale(
-            self.original_image, (self.hitbox_radius*2, self.hitbox_radius*2))
+        self.image = self.original_image
 
         self.rect = pygame.Rect((self.posx, self.posy),
                                 (self.hitbox_radius*2, self.hitbox_radius*2))

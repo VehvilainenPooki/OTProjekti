@@ -37,6 +37,7 @@ class ChunkLoader:
         Args:
             level_map (int): Tells which level to load
         """
+
         start_zone_location = os.path.join(dirname, "levels", "level_"+str(level_map),"zone1.txt")
 
         self.load_zone(start_zone_location)

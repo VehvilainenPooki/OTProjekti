@@ -35,6 +35,15 @@ class MenuButton(pygame.sprite.Sprite):
             self.original_image, self.size)
         self.rect = pygame.Rect((pos_x, pos_y), self.size)
 
+    def change_pos_scale(self, pos_x, pos_y, scale):
+        w,h = self.original_image.get_size()
+        width = w*scale
+        height = h*scale
+        self.size = (width, height)
+        self.image = pygame.transform.scale(
+            self.original_image, self.size)
+        self.rect = pygame.Rect((pos_x, pos_y), self.size)
+
     def button_action(self):
         return self.action
 

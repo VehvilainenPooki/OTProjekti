@@ -1,2 +1,2 @@
 resolution 1920,1080
-scale 2
+scale 10
