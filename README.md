@@ -11,13 +11,12 @@
 ### [ChangeLog](https://github.com/VehvilainenPooki/OTProjekti/blob/main/Payload_adventure_game/Documentation/ChangeLog.md)
 ### [Release](https://github.com/VehvilainenPooki/OTProjekti/releases/tag/viikko5)
 ## Controls
-At this point in time the game has these controls:
 - [WASD]: Moves the player around.
 - [SHIFT]: Makes the player sprint. (move faster)
 - [CTRL]: Makes the player sneak. (move slower)
-- [SPACE]: Makes the player do a short dash in the current movement direction. This has a 30 frame cooldown.
+- [SPACE]: Makes the player do a short dash in the current movement direction. it has a half a second cooldown.
 - [ESC]: Closes the game.
-- [Mouse_position]: Rotates the player to look at the pointer. This is WIP and real jank.(Not included in the release)
+- [Mouse_position]: Aiming.
 ## Install
 1. Install dependencies with:
 ```bash
@@ -26,6 +25,13 @@ poetry install
 2. Start the game with:
 ```bash
 poetry run invoke start
+```
+(The above one won't normally work on windows)
+
+For windows:
+2. Start the game with:
+```bash
+poetry run invoke startwin
 ```
 ## Commandline functionality
 Start the game:
