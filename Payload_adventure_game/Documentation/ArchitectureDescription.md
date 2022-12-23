@@ -36,7 +36,6 @@
       class Adventure{
           gameloop()
       }
-      class 
       Adventure ..> Player
       Adventure ..> Movement
       Adventure ..> SimpleMob
