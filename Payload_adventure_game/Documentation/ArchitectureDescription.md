@@ -65,11 +65,11 @@ sequenceDiagram
   Collisions->>Terrainsprite: .rect.center
   Terrainsprite-->>Collisions: tuple(pos)
   Collisions-->>-Adventure: True
-  Adventure->>Collisions: remove_collision(Terrainsprite)
+  Adventure->>+Collisions: remove_collision(Terrainsprite)
   Collisions->>Player: .rect.center
   Player-->>Collisions: tuple(pos)
   Collisions->>Terrainsprite: .rect.center
   Terrainsprite-->>Collisions: tuple(pos)
-  Collisions->>Player: set_pos(x,y)
+  Collisions->>-Player: set_pos(x,y)
 ```
 
