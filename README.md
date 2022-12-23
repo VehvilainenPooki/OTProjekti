@@ -33,7 +33,7 @@ For windows:
 ```bash
 poetry run invoke startwin
 ```
-## Commandline functionality
+## Commandline functionality (for linux)
 Start the game:
 ```bash
 poetry run invoke start
