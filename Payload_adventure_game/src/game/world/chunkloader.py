@@ -59,17 +59,17 @@ class ChunkLoader:
                 continue
             parts = zone_part.split(" ")
             if parts[0] == "Player":
-                self.init_player(parts)
+                self._init_player(parts)
                 continue
             if parts[0] == "Tree":
-                self.init_tree(parts)
+                self._init_tree(parts)
         zone.close()
 
-    def init_player(self, data):
+    def _init_player(self, data):
         pos = data[1].split(",")
         self.player = Player(int(pos[0]), int(pos[1]), 50, 20)
 
-    def init_tree(self, data):
+    def _init_tree(self, data):
         pos = data[1].split(",")
         if int(data[2]) == 1:
             self.terrainsprites.add(TerrainSprite(int(pos[0]), int(pos[1]), 30, 200, 1))

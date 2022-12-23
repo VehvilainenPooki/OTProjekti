@@ -26,7 +26,7 @@ class GameloopHandler():
 
         pygame.init()
 
-    def start_menu(self):
+    def start_loop(self):
         running = True
         while running:
             pygame.mouse.set_visible(True)
