@@ -52,7 +52,7 @@
 ```
 
 ## Example logic sequence diagram: Player collision with terrainsprite
-On every frame the game checks if the player is colliding with anything. If there is a collision then the game chooses what to do. In this case it runs the method remove_collision(terrainsprite) which moves the player so it just touches it. are_colliding() and remove_collision() both check that there is a collision. are_colliding() reports this by returning True if they are colliding. remove_collision() then calculates the minimum distance to move the object to separate them.
+On every frame the game checks if the player is colliding with anything are_colliding(player, sprite). If there is a collision then the Adventure class chooses what to do. In this case it runs the method remove_collision(player, sprite) which separates the player and the sprite. are_colliding() and remove_collision() both check if there is a collision. are_colliding() returns this info as a boolean statement. remove_collision() then calculates the minimum distance to move the sprite to separate them and moves the first arguments sprite.
 ```mermaid
 sequenceDiagram
   participant Adventure
