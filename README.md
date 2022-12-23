@@ -16,7 +16,7 @@
 - [CTRL]: Makes the player sneak. (move slower)
 - [SPACE]: Makes the player do a short dash in the current movement direction. it has a half a second cooldown.
 - [ESC]: Closes the game.
-- [Mouse_position]: Aiming.
+-  \[Mouse_position]: Aiming.
 ## Install
 1. Install dependencies with:
 ```bash
