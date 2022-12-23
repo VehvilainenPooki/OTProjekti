@@ -15,7 +15,7 @@ If you are using windows this won't most likely work. This is because of pty.
 
 For Windows run:
 ```bash
-poetry run python .\src\index.py
+poetry run invoke startwin
 ```
 ## Menu
 The menu is navigated with the mouse. Just hover over the button you want to interact with and click the mouse1 button of your mouse.
