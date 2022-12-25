@@ -8,19 +8,22 @@ The game has a top down 2D view with the camera following the player.
 The game has a start screen with an options menu.
 ## Base game featureset
 - start screen
-  - Start button
+  - Start button 
   - Settings
 - game
   - Start button jumps straight into gameplay
-  - Player can start and stop the caravan movement at any moment.
-  - enemies
-  - Collectable resources
-  - 3 areas to explore
-  - 2 upgrades for the player
-  - 2 upgrades for the caravan
+  - Player movement: WASD, Sprint, Sneak, Dash, Aiming with mouse
+  - Trees
+  - Attacking \[incomplete]
+  - Player can start and stop the caravan movement at any moment. \[incomplete]
+  - enemies \[incomplete]
+  - Collectable resources \[incomplete]
+  - 3 areas to explore \[WIP]
+  - 2 upgrades for the player \[incomplete]
+  - 2 upgrades for the caravan \[incomplete]
   
 ![http://url/to/img.png](https://raw.githubusercontent.com/VehvilainenPooki/OTProjekti/main/Payload_adventure_game/Documentation/Images/conceptdrawing.png)
-## Further development ideas
+## Further development
 - Multiple enemy types
 - multiple resource types
 - Platforming elements
