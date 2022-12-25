@@ -19,7 +19,7 @@ The game has a start screen with an options menu.
   - 2 upgrades for the player
   - 2 upgrades for the caravan
   
-![http://url/to/img.png](https://raw.githubusercontent.com/VehvilainenPooki/OTProjekti/main/Payload_adventure_game/Documentation/Images/Luonnos.png)
+![http://url/to/img.png](https://raw.githubusercontent.com/VehvilainenPooki/OTProjekti/main/Payload_adventure_game/Documentation/Images/concept_drawing.png)
 ## Further development ideas
 - Multiple enemy types
 - multiple resource types
