@@ -11,12 +11,6 @@
       class Movement{
           move()
       }
-      class SimpleMob{
-          position
-          hitbox
-          health
-          damage()
-      }
       class Chunkloader{
           initialize_level()
           load_zone()
@@ -44,7 +38,6 @@
       GameloopHandler ..> Adventure
       Adventure ..> Player
       Adventure ..> Movement
-      Adventure ..> SimpleMob
       Adventure ..> Chunkloader
       Movement ..> Player
       Chunkloader ..> TerrainSprite
