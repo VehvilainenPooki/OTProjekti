@@ -55,34 +55,32 @@ class GameloopHandler():
 
     def _change_scaling(self, resolution):
         self.resolution = resolution
-        config = open(os.path.join(dirname, "..", "config.txt"), "w")
-        config.seek(0)
-        config.write("resolution " +
-                     str(resolution[0])+","+str(resolution[1]) + "\n")
-        if resolution == (1280, 720):
-            self.scale = 20/3
-        elif resolution == (1920, 1080):
-            self.scale = 10.00
-        elif resolution == (2560, 1440):
-            self.scale = (13+(1/3))
-        elif resolution == (3840, 2160):
-            self.scale = 20
-        config.write("scale " + str(self.scale))
+        with open(os.path.join(dirname, "..", "config.txt"), "w") as config:
+            config.seek(0)
+            config.write("resolution " +
+                        str(resolution[0])+","+str(resolution[1]) + "\n")
+            if resolution == (1280, 720):
+                self.scale = 20/3
+            elif resolution == (1920, 1080):
+                self.scale = 10.00
+            elif resolution == (2560, 1440):
+                self.scale = (13+(1/3))
+            elif resolution == (3840, 2160):
+                self.scale = 20
+            config.write("scale " + str(self.scale))
         config.close()
 
         self.screen = pygame.display.set_mode(self.resolution, pygame.NOFRAME)
 
     def _read_config(self):
-        config = open(os.path.join(dirname, "..", "config.txt"), "r")
-        raw = config.readline().split(" ")[1].strip().split(",")
-        self.resolution = (int(raw[0]), int(raw[1]))
-        self.scale = float(config.readline().split(" ")[1])
-        config.close()
+        with open(os.path.join(dirname, "..", "config.txt"), "r") as config:
+            raw = config.readline().split(" ")[1].strip().split(",")
+            self.resolution = (int(raw[0]), int(raw[1]))
+            self.scale = float(config.readline().split(" ")[1])
 
     def _recover_config(self):
-        config = open(os.path.join(dirname, "..", "config.txt"), "w")
-        config.seek(0)
-        config.write("resolution 1280,720\nscale 6.66666667")
-        config.close()
+        with open(os.path.join(dirname, "..", "config.txt"), "w") as config:
+            config.seek(0)
+            config.write("resolution 1280,720\nscale 6.66666667")
         self.resolution = (1280, 720)
         self.scale = 5

@@ -40,7 +40,6 @@ class Adventure():
 
             self.movement.move(resolution)
 
-            # Checking circle collision
             for sprite in self.chunkloader.ground_sprites:
                 if self.collisions.are_colliding(self.player, sprite):
                     self.collisions.remove_collision(self.player, sprite)

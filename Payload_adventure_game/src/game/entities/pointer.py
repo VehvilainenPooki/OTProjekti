@@ -45,8 +45,3 @@ class Pointer(pygame.sprite.Sprite):
         i_size = self.image.get_rect().center
         pos = (self.rect[0]+i_size[0], self.rect[1]+i_size[1])
         return pos
-
-    def get_rendering_pos(self):
-        i_size = self.image.get_rect().center
-        pos = (self.rect[0]-i_size[0], self.rect[1]-i_size[1])
-        return pos

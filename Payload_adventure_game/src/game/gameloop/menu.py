@@ -36,11 +36,11 @@ class Menu():
 
     def _init_mainmenu(self):
         self.start_button = MenuButton(
-            os.path.join(dirname, "..", "assets", "menu", "start.png"), "Start", self.resolution[0]/20, self.resolution[1]/10, 10)
+            os.path.join(dirname, "..", "assets", "menu", "start.png"), "Start", self.resolution[0]/20, self.resolution[1]/10, 10) #pylint: disable=line-too-long
         self.settings_button = MenuButton(
-            os.path.join(dirname, "..", "assets", "menu", "settings.png"), "Settings", self.resolution[0]/20, 2*(self.resolution[1]/10), 10)
+            os.path.join(dirname, "..", "assets", "menu", "settings.png"), "Settings", self.resolution[0]/20, 2*(self.resolution[1]/10), 10) #pylint: disable=line-too-long
         self.quit_button = MenuButton(
-            os.path.join(dirname, "..", "assets", "menu", "quit.png"), "Quit", self.resolution[0]/20, self.resolution[1]-2*(self.resolution[1]/10), 10)
+            os.path.join(dirname, "..", "assets", "menu", "quit.png"), "Quit", self.resolution[0]/20, self.resolution[1]-2*(self.resolution[1]/10), 10) #pylint: disable=line-too-long
 
         self.mainmenu_buttons = pygame.sprite.Group()
         self.mainmenu_buttons.add(
@@ -51,13 +51,13 @@ class Menu():
 
     def _init_settingsmenu(self, resolution):
         self.resolution_button = MenuButton(
-            os.path.join(dirname, "..", "assets", "menu", "resolution.png"), "Resolution", self.resolution[0]/20, 1*(self.resolution[1]/10), 10)
+            os.path.join(dirname, "..", "assets", "menu", "resolution.png"), "Resolution", self.resolution[0]/20, 1*(self.resolution[1]/10), 10) #pylint: disable=line-too-long
         self.resolution_text = TextSprite(
-            str(resolution[0])+"x"+str(resolution[1]), None, 6*(self.resolution[0]/20), 1*(self.resolution[1]/10), 10)
+            str(resolution[0])+"x"+str(resolution[1]), None, 6*(self.resolution[0]/20), 1*(self.resolution[1]/10), 10) #pylint: disable=line-too-long
         self.apply_button = MenuButton(
-            os.path.join(dirname, "..", "assets", "menu", "apply.png"), "Apply", self.resolution[0]/20, 2*(self.resolution[1]/10), 10)
+            os.path.join(dirname, "..", "assets", "menu", "apply.png"), "Apply", self.resolution[0]/20, 2*(self.resolution[1]/10), 10) #pylint: disable=line-too-long
         self.back_button = MenuButton(
-            os.path.join(dirname, "..", "assets", "menu", "back.png"), "Back", self.resolution[0]/20, self.resolution[1]-2*(self.resolution[1]/10), 10)
+            os.path.join(dirname, "..", "assets", "menu", "back.png"), "Back", self.resolution[0]/20, self.resolution[1]-2*(self.resolution[1]/10), 10) #pylint: disable=line-too-long
 
         self.settingsmenu_buttons = pygame.sprite.Group()
         self.settingsmenu_buttons.add(

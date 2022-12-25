@@ -4,14 +4,26 @@ import unittest
 import pygame
 
 from ..entities.player import Player
+from ..entities.pointer import Pointer
 from ..logic.movement import Movement
 
+
+class StubPointer():
+    def __init__(self) -> None:
+        self.pos = (0,0)
+
+    def spin(self):
+        self.pos = (self.pos[0]+100,self.pos[1])
+
+    def get_pos(self):
+        return self.pos
 
 class TestMovement(unittest.TestCase):
     def setUp(self):
         pygame.init()
         self.player = Player()
-        self.movement = Movement(self.player)
+        self.pointer = StubPointer()
+        self.movement = Movement(self.player, self.pointer)
 
     def test_walk_up(self):
         start_pos = self.player.get_pos()
@@ -137,5 +149,15 @@ class TestMovement(unittest.TestCase):
         keys = {pygame.K_SPACE: True, pygame.K_w: False,
                 pygame.K_s: True, pygame.K_a: False, pygame.K_d: True}
         self.movement._dash(keys)
+        self.movement._dash(keys)
         print(self.player.rect)
-        self.assertEqual(self.player.rect == (10, 10, 20, 20), True)
+        self.assertEqual(self.player.rect == (20, 20, 20, 20), True)
+
+    def test_looking_at(self):
+        self.movement._update_pointer_pos()
+        self.movement._look_at_pointer((1920,1080))
+
+    def test_pointer_moves(self):
+        pointer = Pointer()
+        pointer.spin()
+        self.assertEqual((0,0) == pointer.get_pos(), True)
