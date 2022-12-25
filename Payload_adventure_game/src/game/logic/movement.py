@@ -37,7 +37,7 @@ class Movement:
 
         self._take_a_step(keys, self._movement_speed(keys))
 
-        if self.pointer.isinstance():
+        if self.pointer is not None:
             self._update_pointer_pos()
             self._look_at_pointer(resolution)
 
