@@ -10,7 +10,7 @@
 ### [TestingDocument](https://github.com/VehvilainenPooki/OTProjekti/blob/main/Payload_adventure_game/Documentation/TestingDocument.md)
 ### [Working Hours Log](https://github.com/VehvilainenPooki/OTProjekti/blob/main/Payload_adventure_game/Documentation/WorkingHoursLog.md)
 ### [ChangeLog](https://github.com/VehvilainenPooki/OTProjekti/blob/main/Payload_adventure_game/Documentation/ChangeLog.md)
-### [Release](https://github.com/VehvilainenPooki/OTProjekti/releases/tag/viikko5)
+### [Releases](https://github.com/VehvilainenPooki/OTProjekti/releases)
 ## Controls
 - [WASD]: Moves the player around.
 - [SHIFT]: Makes the player sprint. (move faster)
