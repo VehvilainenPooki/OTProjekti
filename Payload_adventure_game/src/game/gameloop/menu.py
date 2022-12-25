@@ -35,14 +35,18 @@ class Menu():
         self._init_settingsmenu(resolution)
 
     def _init_mainmenu(self):
+        self.start_button = MenuButton(
+            os.path.join(dirname, "..", "assets", "menu", "start.png"), "Start", self.resolution[0]/20, self.resolution[1]/10, 10)
+        self.settings_button = MenuButton(
+            os.path.join(dirname, "..", "assets", "menu", "settings.png"), "Settings", self.resolution[0]/20, 2*(self.resolution[1]/10), 10)
+        self.quit_button = MenuButton(
+            os.path.join(dirname, "..", "assets", "menu", "quit.png"), "Quit", self.resolution[0]/20, self.resolution[1]-2*(self.resolution[1]/10), 10)
+
         self.mainmenu_buttons = pygame.sprite.Group()
         self.mainmenu_buttons.add(
-            MenuButton(
-                os.path.join(dirname, "..", "assets", "menu", "start.png"), "Start", self.resolution[0]/20, self.resolution[1]/10, 10),
-            MenuButton(
-                os.path.join(dirname, "..", "assets", "menu", "settings.png"), "Settings", self.resolution[0]/20, 2*(self.resolution[1]/10), 10),
-            MenuButton(
-                os.path.join(dirname, "..", "assets", "menu", "quit.png"), "Quit", self.resolution[0]/20, self.resolution[1]-2*(self.resolution[1]/10), 10)
+            self.start_button,
+            self.settings_button,
+            self.quit_button
         )
 
     def _init_settingsmenu(self, resolution):
@@ -57,14 +61,10 @@ class Menu():
 
         self.settingsmenu_buttons = pygame.sprite.Group()
         self.settingsmenu_buttons.add(
-            MenuButton(
-                os.path.join(dirname, "..", "assets", "menu", "resolution.png"), "Resolution", self.resolution[0]/20, 1*(self.resolution[1]/10), 10),
-            TextSprite(
-                str(resolution[0])+"x"+str(resolution[1]), None, 6*(self.resolution[0]/20), 1*(self.resolution[1]/10), 10),
-            MenuButton(
-                os.path.join(dirname, "..", "assets", "menu", "apply.png"), "Apply", self.resolution[0]/20, 2*(self.resolution[1]/10), 10),
-            MenuButton(
-                os.path.join(dirname, "..", "assets", "menu", "back.png"), "Back", self.resolution[0]/20, self.resolution[1]-2*(self.resolution[1]/10), 10)
+            self.resolution_button,
+            self.resolution_text,
+            self.apply_button,
+            self.back_button
         )
 
         self.under_mouse_buttons = pygame.sprite.Group()
