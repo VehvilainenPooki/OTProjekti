@@ -31,8 +31,12 @@
           gameloop()
       }
       class Menu{
-      mainmenu_screen()
-      settingsmenu_screen()
+          mainmenu_screen()
+          settingsmenu_screen()
+      }
+      class Collisions{
+          are_colliding()
+          remove_collision()
       }
       GameloopHandler ..> Menu
       GameloopHandler ..> Adventure
@@ -42,6 +46,9 @@
       Movement ..> Player
       Chunkloader ..> TerrainSprite
       Chunkloader ..> Player
+      Adventure ..> Collisions
+      Collisions ..> Player
+      Collisions ..> TerrainSprite
 ```
 
 ## Example logic sequence diagram: Player collision with terrainsprite
