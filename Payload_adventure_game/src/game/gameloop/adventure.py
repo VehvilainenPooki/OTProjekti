@@ -8,15 +8,14 @@ from game.logic.movement import Movement
 from game.logic.collisions import Collisions
 
 from game.rendering.camera import Camera
-from game.rendering.renderer import Renderer
 
 dirname = os.path.dirname(__file__)
 
+
 class Adventure():
 
-    def __init__(self, clock, screen, scale, resolution):
-        self.resolution = resolution
-        self.scale = scale
+    def __init__(self, renderer):
+        self.renderer = renderer
 
         self.chunkloader = ChunkLoader(1)
 
@@ -24,28 +23,29 @@ class Adventure():
         self.pointer = self.chunkloader.get_pointer()
         self.movement = Movement(self.player, self.pointer)
 
-        self.cam = Camera(self.player, resolution, scale)
-        self.renderer = Renderer()
-
         self.collisions = Collisions(self.player)
 
+        self.cam = Camera(self.player)
+        self.renderer.set_camera(self.cam)
 
     def gameloop(self, clock, screen, scale, resolution):
-        print("\nLaunching Payload_adventure_game.\nPressing [esc] closes the game")
+        self.renderer.update_scaling(resolution, scale)
+        print(
+            "\nLaunching Payload_adventure_game.\nPressing [esc] closes the game")
         running = True
         while running:
             running = self._is_running()
 
             pygame.mouse.set_visible(False)
 
-            self.movement.move()
+            self.movement.move(resolution)
 
             # Checking circle collision
             for sprite in self.chunkloader.ground_sprites:
                 if self.collisions.are_colliding(self.player, sprite):
                     self.collisions.remove_collision(self.player, sprite)
 
-            self.renderer.render_frame(screen,self.chunkloader.all_sprites, self.cam)
+            self.renderer.render_frame(screen, self.chunkloader.all_sprites)
 
             screen.blit(self.pointer.image, self.pointer.rect)
 
@@ -54,9 +54,10 @@ class Adventure():
 
     def _is_running(self):
         for event in pygame.event.get():
-                if event.type == pygame.QUIT or (event.__dict__.get("key") == 27 and event.type == 768):
-                    return False
+            if event.type == pygame.QUIT or (event.__dict__.get("key") == 27 and event.type == 768):
+                return False
         return True
+
 
 """Todo:
 - create index.py and clean up this mess

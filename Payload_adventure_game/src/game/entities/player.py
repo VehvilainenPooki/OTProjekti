@@ -33,18 +33,14 @@ class Player(pygame.sprite.Sprite):
             os.path.join(dirname, "..", "assets", "player", "player.png")
         )
 
-        self.image = self.original_image
+        self.image = pygame.transform.scale(
+            self.get_original_image(), (self.hitbox_radius*2, self.hitbox_radius*2))
 
         self.rect = pygame.Rect((self.posx, self.posy),
                                 (self.hitbox_radius*2, self.hitbox_radius*2))
 
     def get_pos(self):
         return (self.rect.x, self.rect.y)
-    
-    def get_rendering_pos(self):
-        i_size = self.image.get_rect().center
-        pos = (self.rect[0]-i_size[0]+self.hitbox_radius,self.rect[1]-i_size[1]+self.hitbox_radius)
-        return pos
 
     def set_pos(self, new_x, new_y):
         self.posx = new_x

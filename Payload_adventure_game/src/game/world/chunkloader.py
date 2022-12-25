@@ -5,13 +5,14 @@ import pygame
 from ..entities.player import Player
 from ..entities.pointer import Pointer
 
-from ..entities.terrainSprite import TerrainSprite
+from ..entities.terrain_sprite import TerrainSprite
 
 dirname = os.path.dirname(__file__)
 
+
 class ChunkLoader:
     """Class to load in the environment chunk by chunk
-    
+
     Attributes:
         level_map (int): Tells which level to load
     """
@@ -25,7 +26,6 @@ class ChunkLoader:
         self.player = None
         self.pointer = Pointer()
         self.terrainsprites = pygame.sprite.Group()
-        #todo: rocks
         self.ground_sprites = pygame.sprite.Group()
         self.all_sprites = pygame.sprite.Group()
 
@@ -38,13 +38,13 @@ class ChunkLoader:
             level_map (int): Tells which level to load
         """
 
-        start_zone_location = os.path.join(dirname, "levels", "level_"+str(level_map),"zone1.txt")
+        start_zone_location = os.path.join(
+            dirname, "levels", "level_"+str(level_map), "zone1.txt")
 
         self.load_zone(start_zone_location)
 
         self.ground_sprites.add(
             self.terrainsprites
-            #todo: rocks
         )
 
         self.all_sprites.add(
@@ -55,7 +55,7 @@ class ChunkLoader:
     def load_zone(self, location):
         zone = open(location, "r")
         for zone_part in zone:
-            if len(zone_part)<4:
+            if len(zone_part) < 4:
                 continue
             parts = zone_part.split(" ")
             if parts[0] == "Player":
@@ -72,15 +72,13 @@ class ChunkLoader:
     def _init_tree(self, data):
         pos = data[1].split(",")
         if int(data[2]) == 1:
-            self.terrainsprites.add(TerrainSprite(int(pos[0]), int(pos[1]), 30, 200, 1))
+            self.terrainsprites.add(TerrainSprite(
+                int(pos[0]), int(pos[1]), 30, 200, 1))
             return
         if int(data[2]) == 2:
-            self.terrainsprites.add(TerrainSprite(int(pos[0]), int(pos[1]), 60, 200, 2))
+            self.terrainsprites.add(TerrainSprite(
+                int(pos[0]), int(pos[1]), 60, 200, 2))
             return
-
-
-
-
 
     def get_player(self):
         return self.player

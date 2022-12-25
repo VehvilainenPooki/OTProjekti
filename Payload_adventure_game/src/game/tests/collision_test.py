@@ -2,7 +2,7 @@ import unittest
 
 from ..entities.player import Player
 from ..logic.collisions import Collisions
-from ..entities.terrainSprite import TerrainSprite
+from ..entities.terrain_sprite import TerrainSprite
 
 
 class TestCollision(unittest.TestCase):
@@ -16,7 +16,7 @@ class TestCollision(unittest.TestCase):
 
     def test_remove_collision_without_collision(self):
         self.collisions.remove_collision(self.circle)
-        self.assertEqual(self.player.rect == (0,0,20,20), True)
+        self.assertEqual(self.player.rect == (0, 0, 20, 20), True)
 
     def test_collision(self):
         self.player.set_pos(290, 290)

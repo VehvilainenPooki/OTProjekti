@@ -28,20 +28,20 @@ class Movement:
         self.dash_y = 0
         self.dash_cooldown = 0
 
-    def move(self):
+    def move(self, resolution):
         """Method to move player and pointer
         """
         keys = pygame.key.get_pressed()
 
-        self.dash(keys)
+        self._dash(keys)
 
-        self.take_a_step(keys, self.movement_speed(keys))
+        self._take_a_step(keys, self._movement_speed(keys))
 
-        if self.pointer != None:
-            self.update_pointer_pos()
-            self.look_at_pointer()
+        if self.pointer.isinstance():
+            self._update_pointer_pos()
+            self._look_at_pointer(resolution)
 
-    def movement_speed(self, keys):
+    def _movement_speed(self, keys):
         """Gets the movement speed option which is currently pressed
 
         Args:
@@ -56,7 +56,7 @@ class Movement:
             return 3
         return 5
 
-    def take_a_step(self, keys, speed):
+    def _take_a_step(self, keys, speed):
         """Moves the player a step in users held direction with the speed multiplier.
 
         Args:
@@ -72,7 +72,7 @@ class Movement:
         if keys[pygame.K_a]:
             self.player.add_pos(-speed, 0)
 
-    def dash(self, keys):
+    def _dash(self, keys):
         """Moves the player quickly in a direction for a short amout of time.
         Dash is active for 10 frames and then has 30 frame cooldown.
 
@@ -81,7 +81,7 @@ class Movement:
         """
         # Activating dash
         if keys[pygame.K_SPACE] and self.dash_cooldown < 1:
-            self.activate_dash(keys)
+            self._activate_dash(keys)
 
         # Moving player while dashing
         if self.dash_cooldown > 0:
@@ -89,7 +89,7 @@ class Movement:
                 self.player.add_pos(10*self.dash_x, 10*self.dash_y)
             self.dash_cooldown -= 1
 
-    def activate_dash(self, keys):
+    def _activate_dash(self, keys):
         """Checking if no cooldown
         and then reading user inputs for the dash direction.
 
@@ -112,21 +112,19 @@ class Movement:
             self.dash_y = -1
         self.dash_cooldown = 40
 
-    def update_pointer_pos(self):
+    def _update_pointer_pos(self):
         """Updates mouse pointer position.
         """
         self.pointer.spin()
 
-    def look_at_pointer(self):
+    def _look_at_pointer(self, resolution):
         """Rotates player model to look at the mouse pointer.
-        todo: unjankyfy
         """
         po_pos = self.pointer.get_pos()
 
         pl_angle = math.atan2(
-            960-po_pos[0], 540-po_pos[1])*(180/math.pi)
+            resolution[0]/2-po_pos[0], resolution[1]/2-po_pos[1])*(180/math.pi)
 
-        
         self.player.image = pygame.transform.scale(
             self.player.get_original_image(), (self.player.hitbox_radius*2, self.player.hitbox_radius*2))
 

@@ -23,7 +23,7 @@ class Pointer(pygame.sprite.Sprite):
         self.original_image = pygame.image.load(
             os.path.join(dirname, "..", "assets", "mouse", "pointer.png")
         )
-        
+
         self.image = pygame.transform.scale(self.original_image, (32, 32))
 
         self.rect = self.image.get_rect()
@@ -43,10 +43,10 @@ class Pointer(pygame.sprite.Sprite):
 
     def get_pos(self):
         i_size = self.image.get_rect().center
-        pos = (self.rect[0]+i_size[0],self.rect[1]+i_size[1])
+        pos = (self.rect[0]+i_size[0], self.rect[1]+i_size[1])
         return pos
-    
+
     def get_rendering_pos(self):
         i_size = self.image.get_rect().center
-        pos = (self.rect[0]-i_size[0],self.rect[1]-i_size[1])
+        pos = (self.rect[0]-i_size[0], self.rect[1]-i_size[1])
         return pos

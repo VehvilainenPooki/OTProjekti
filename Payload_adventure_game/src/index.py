@@ -1,4 +1,4 @@
-from game.gameloop.gameloopHandler import GameloopHandler as GlHandler
+from game.gameloop.gameloop_handler import GameloopHandler as GlHandler
 
 loop = GlHandler()
 
