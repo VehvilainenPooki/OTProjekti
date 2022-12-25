@@ -18,7 +18,7 @@ The game has a start screen with an options menu.
   - Player can start and stop the caravan movement at any moment. \[incomplete]
   - enemies \[incomplete]
   - Collectable resources \[incomplete]
-  - 3 areas to explore \[WIP]
+  - 3 areas to explore \[incomplete]
   - 2 upgrades for the player \[incomplete]
   - 2 upgrades for the caravan \[incomplete]
   
