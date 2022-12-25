@@ -33,5 +33,7 @@
 |22.12.22|10:00-13:00|Working on resolution scaling.-> Menu scaling works.|
 ||13:00-14:00|Integrating scaling into game.|
 ||17:00-18:00|Separating rendering from game logic. WIP|
+|23.12.22|4:00:00|Cleaning up the repository.|
+|25.12.22|9:00:00|Writing tests. Cleaning up the code. writing docstrings, creating TestingDocument.md|
 ||||
-||-:00:00|<-Total time spent on the project|
+||63:30:00|<-Total time spent on the project|
