@@ -7,6 +7,7 @@
 ### [User manual](https://github.com/VehvilainenPooki/OTProjekti/blob/main/Payload_adventure_game/Documentation/UserManual.md)
 ### [Requirements specification](https://github.com/VehvilainenPooki/OTProjekti/blob/main/Payload_adventure_game/Documentation/Payload_adventure_game.md)
 ### [ArchitectureDescription](https://github.com/VehvilainenPooki/OTProjekti/blob/main/Payload_adventure_game/Documentation/ArchitectureDescription.md)
+### [TestingDocument](https://github.com/VehvilainenPooki/OTProjekti/blob/main/Payload_adventure_game/Documentation/TestingDocument.md)
 ### [Working Hours Log](https://github.com/VehvilainenPooki/OTProjekti/blob/main/Payload_adventure_game/Documentation/WorkingHoursLog.md)
 ### [ChangeLog](https://github.com/VehvilainenPooki/OTProjekti/blob/main/Payload_adventure_game/Documentation/ChangeLog.md)
 ### [Release](https://github.com/VehvilainenPooki/OTProjekti/releases/tag/viikko5)
