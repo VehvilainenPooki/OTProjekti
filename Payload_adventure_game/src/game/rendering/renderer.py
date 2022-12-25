@@ -31,8 +31,10 @@ class Renderer():
         for sprite in sprites:
             s_pos = sprite.get_pos()
             size = sprite.image.get_size()
-            screen.blit(pygame.transform.scale(sprite.image, (size[0]*self.scale, size[1]*self.scale)), (s_pos[0] - (cam_offset[0]+size[0]/2)*self.scale,
-                                                                                                         s_pos[1]-(cam_offset[1]+size[1]/2)*self.scale))
+            scaled_size = (size[0]*self.scale, size[1]*self.scale)
+            s_pos_x = s_pos[0] - (cam_offset[0]+size[0]/2)*self.scale
+            s_pos_y = s_pos[1]-(cam_offset[1]+size[1]/2)*self.scale
+            screen.blit(pygame.transform.scale(sprite.image, scaled_size), (s_pos_x, s_pos_y))
 
     def set_camera(self, camera):
         """Sets the camera that the renderer uses

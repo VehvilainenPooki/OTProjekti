@@ -80,8 +80,10 @@ class MenuButton(pygame.sprite.Sprite):
             for posy in range(height):
                 pixel = self.image.get_at((posx, posy))
                 if pixel[3] > 0:
-                    self.image.set_at((posx, posy), pygame.Color(
-                        self._change_color_value(pixel[0], 50), self._change_color_value(pixel[1], 50), self._change_color_value(pixel[2], 50), pixel[3]))
+                    red = self._change_color_value(pixel[0], 50)
+                    green = self._change_color_value(pixel[1], 50)
+                    blue = self._change_color_value(pixel[2], 50)
+                    self.image.set_at((posx, posy), pygame.Color(red, green, blue, pixel[3]))
 
     def _restore_button_brightness(self):
         """method to restore the button brightness.

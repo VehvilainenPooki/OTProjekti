@@ -126,7 +126,7 @@ class Movement:
             resolution[0]/2-po_pos[0], resolution[1]/2-po_pos[1])*(180/math.pi)
 
         self.player.image = pygame.transform.scale(
-            self.player.get_original_image(), (self.player.hitbox_radius*2, self.player.hitbox_radius*2))
+            self.player.get_original_image(), (self.player.hitbox_radius*2, self.player.hitbox_radius*2)) #pylint: disable=line-too-long
 
         self.player.image = pygame.transform.rotate(
             self.player.image, pl_angle)

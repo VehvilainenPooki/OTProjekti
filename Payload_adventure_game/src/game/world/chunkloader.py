@@ -53,17 +53,16 @@ class ChunkLoader:
         )
 
     def load_zone(self, location):
-        zone = open(location, "r")
-        for zone_part in zone:
-            if len(zone_part) < 4:
-                continue
-            parts = zone_part.split(" ")
-            if parts[0] == "Player":
-                self._init_player(parts)
-                continue
-            if parts[0] == "Tree":
-                self._init_tree(parts)
-        zone.close()
+        with open(location, "r", encoding="utf-8") as zone:
+            for zone_part in zone:
+                if len(zone_part) < 4:
+                    continue
+                parts = zone_part.split(" ")
+                if parts[0] == "Player":
+                    self._init_player(parts)
+                    continue
+                if parts[0] == "Tree":
+                    self._init_tree(parts)
 
     def _init_player(self, data):
         pos = data[1].split(",")

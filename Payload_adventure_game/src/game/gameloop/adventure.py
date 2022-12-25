@@ -56,25 +56,3 @@ class Adventure():
             if event.type == pygame.QUIT or (event.__dict__.get("key") == 27 and event.type == 768):
                 return False
         return True
-
-
-"""Todo:
-- create index.py and clean up this mess
-- ui
-    -menu x
-    -settings x
-    -pause menu
-- resolution scaling
-- mobs
-    -ai
-    -textures
-    attack
-    -taking damage
-- player
-    -attack
-    -taking damage
-- payload
-    -movement
-    -damage
-    -interaction
-"""

@@ -21,7 +21,7 @@ class GameloopHandler():
 
         try:
             self._read_config()
-        except IndexError and TypeError and FileNotFoundError:
+        except (IndexError, TypeError, FileNotFoundError):
             self._recover_config()
 
         self.renderer = Renderer(self.resolution, self.scale, None)
@@ -55,7 +55,7 @@ class GameloopHandler():
 
     def _change_scaling(self, resolution):
         self.resolution = resolution
-        with open(os.path.join(dirname, "..", "config.txt"), "w") as config:
+        with open(os.path.join(dirname, "..", "config.txt"), "w", encoding="utf-8") as config:
             config.seek(0)
             config.write("resolution " +
                         str(resolution[0])+","+str(resolution[1]) + "\n")
@@ -73,13 +73,13 @@ class GameloopHandler():
         self.screen = pygame.display.set_mode(self.resolution, pygame.NOFRAME)
 
     def _read_config(self):
-        with open(os.path.join(dirname, "..", "config.txt"), "r") as config:
+        with open(os.path.join(dirname, "..", "config.txt"), "r", encoding="utf-8") as config:
             raw = config.readline().split(" ")[1].strip().split(",")
             self.resolution = (int(raw[0]), int(raw[1]))
             self.scale = float(config.readline().split(" ")[1])
 
     def _recover_config(self):
-        with open(os.path.join(dirname, "..", "config.txt"), "w") as config:
+        with open(os.path.join(dirname, "..", "config.txt"), "w", encoding="utf-8") as config:
             config.seek(0)
             config.write("resolution 1280,720\nscale 6.66666667")
         self.resolution = (1280, 720)
