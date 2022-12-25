@@ -36,3 +36,10 @@ At this point in time the game has these controls:
 - [SPACE]: Makes the player do a short dash in the current movement direction. This has a 30 frame cooldown.
 - \[Mouse_position]: Aiming.
 - [ESC]: Closes the game.
+## WIP
+### Making a level
+Currently the game loads only level_1 zone1 but this `zone1.txt` can be edited to your hearts content.
+
+The `zone1.txt` file accepts `Player x,y` lines and `Tree x,y type` lines (with types 1 and 2).
+
+Make sure to get the syntax right or the game might crash...
